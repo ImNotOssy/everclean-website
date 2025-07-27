@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EverClean Housekeeping - Professional Cleaning Services in DeSoto, TX</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <!-- NEW: Flatpickr Calendar CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        /* Brand Color Scheme */
+        .hero-bg { background-color: #f0f5f0; }
+        .brand-text { color: #54624C; }
+        .brand-bg { background-color: #8E9E82; }
+        .brand-bg-light { background-color: #f0f5f0; }
+        .brand-border { border-color: #8E9E82; }
+        .brand-ring:focus { --tw-ring-color: #8E9E82; }
+        .selected-option {
+            border-color: #8E9E82;
+            box-shadow: 0 0 0 2px #8E9E82;
+            background-color: #f0f5f0;
+        }
+        .cta-button { transition: all 0.3s ease; }
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            filter: brightness(1.05);
+        }
+        .price-display {
+            background-color: #e8ede7;
+            border-left: 5px solid #8E9E82;
+        }
+        .option-card { transition: all 0.2s ease-in-out; }
+        .checklist-accordion summary { cursor: pointer; outline: none; }
+        .checklist-accordion summary::-webkit-details-marker { display: none; }
+        
+        /* Google Autocomplete Dropdown Styling */
+        .pac-container {
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            border: 1px solid #e5e7eb;
+            z-index: 1000;
+        }
+        .pac-item { padding: 0.75rem; font-size: 0.875rem; cursor: pointer; }
+        .pac-item:hover { background-color: #f3f4f6; }
+        .pac-item-query { font-weight: 600; }
+
+        /* NEW: Custom Flatpickr Calendar Styling */
+        .flatpickr-calendar {
+            background-color: #ffffff;
+            border-radius: 0.5rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        .flatpickr-day.selected, .flatpickr-day.startRange, .flatpickr-day.endRange {
+            background: #8E9E82; /* brand-bg */
+            border-color: #8E9E82;
+        }
+        .flatpickr-day:hover {
+            background: #f0f5f0; /* hero-bg */
+        }
+        .flatpickr-months .flatpickr-month {
+            color: #54624C; /* brand-text */
+            fill: #54624C;
+        }
+        .flatpickr-current-month .flatpickr-monthDropdown-months {
+            color: #54624C;
+        }
+        .flatpickr-weekdays {
+            background: #f0f5f0;
+        }
+        .flatpickr-weekday {
+            color: #54624C;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Header Section -->
+    <header class="hero-bg">
+        <div class="container mx-auto px-6 py-12 text-center">
+            <img src="https://googleusercontent.com/file_content/4" alt="EverClean Housekeeping Logo" class="h-24 w-24 mx-auto mb-4" onerror="this.style.display='none'">
+            <h1 class="text-4xl md:text-6xl font-extrabold brand-text leading-tight">
+                EverClean Housekeeping
+            </h1>
+            <p class="mt-4 text-lg text-gray-600">Your Local, Family-Owned & Fully Insured Cleaning Experts.</p>
+            <p class="text-md text-gray-500">Proudly serving DeSoto, Midlothian, and the surrounding DFW area.</p>
+            <a href="#calculator" class="cta-button mt-8 inline-block brand-bg text-white font-bold rounded-lg px-8 py-4 text-lg shadow-lg">Get an Instant Quote</a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-6 py-16">
+
+        <!-- Service Checklists Section -->
+        <section id="services" class="mb-20">
+            <h2 class="text-3xl font-bold text-center mb-10 brand-text">What's Included in Your Clean?</h2>
+            <div class="max-w-4xl mx-auto space-y-4">
+                <details class="checklist-accordion bg-white p-6 rounded-lg shadow-md group">
+                    <summary class="flex justify-between items-center font-bold text-lg">Standard Cleaning<svg class="w-5 h-5 transform group-open:rotate-180 transition-transform" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg></summary>
+                    <div class="mt-4 grid md:grid-cols-2 gap-x-8 gap-y-4 text-sm text-gray-700">
+                        <div><h4 class="font-semibold mb-2">Kitchen</h4><ul class="list-disc list-inside space-y-1"><li>Clean exterior of all appliances</li><li>Clean tables and countertops</li><li>Clean and disinfect sink</li><li>Clean exterior of cabinets</li><li>Sweep and mop floors</li></ul></div>
+                        <div><h4 class="font-semibold mb-2">Bathrooms</h4><ul class="list-disc list-inside space-y-1"><li>Clean bathtub/shower</li><li>Disinfect sinks and polish fixtures</li><li>Clean and disinfect toilet</li><li>Clean mirrors</li><li>Sweep and mop floors</li></ul></div>
+                        <div><h4 class="font-semibold mb-2">Bedrooms</h4><ul class="list-disc list-inside space-y-1"><li>Dust dressers, lamps, picture frames</li><li>Dust ceiling fan</li><li>Clean mirrors</li><li>Sweep and mop floors</li></ul></div>
+                        <div><h4 class="font-semibold mb-2">All Common Areas</h4><ul class="list-disc list-inside space-y-1"><li>Organize cushions</li><li>Dust all decorations and surfaces</li><li>Basic organization</li><li>Sweep and mop floors</li></ul></div>
+                    </div>
+                </details>
+                <details class="checklist-accordion bg-white p-6 rounded-lg shadow-md group">
+                    <summary class="flex justify-between items-center font-bold text-lg">Deep Cleaning<svg class="w-5 h-5 transform group-open:rotate-180 transition-transform" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg></summary>
+                    <div class="mt-4 grid md:grid-cols-2 gap-x-8 gap-y-4 text-sm text-gray-700">
+                        <div><h4 class="font-semibold mb-2">Includes Everything in Standard, PLUS:</h4><ul class="list-disc list-inside space-y-1 font-semibold brand-text"><li>Detailed baseboard cleaning</li><li>Clean interior of windows</li><li>Remove cobwebs from ceilings & fans</li><li>Clean air vents</li><li>Clean switches/power outlets</li></ul></div>
+                        <div><h4 class="font-semibold mb-2">Kitchen Focus</h4><ul class="list-disc list-inside space-y-1"><li>Clean exterior and interior of cabinets</li><li>Clean refrigerator (inside & out)</li></ul></div>
+                        <div><h4 class="font-semibold mb-2">Bathroom Focus</h4><ul class="list-disc list-inside space-y-1"><li>Clean shower door</li><li>Remove water marks from walls</li><li>Clean bathroom walls</li></ul></div>
+                    </div>
+                </details>
+                <details class="checklist-accordion bg-white p-6 rounded-lg shadow-md group">
+                    <summary class="flex justify-between items-center font-bold text-lg">Move-In / Move-Out Cleaning<svg class="w-5 h-5 transform group-open:rotate-180 transition-transform" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg></summary>
+                     <div class="mt-4 text-sm text-gray-700">
+                        <p class="mb-4 font-semibold">Our most comprehensive clean for empty homes. Includes all Deep Cleaning tasks, with a special focus on preparing a home for the next resident.</p>
+                        <div class="grid md:grid-cols-2 gap-x-8 gap-y-4">
+                            <div><h4 class="font-semibold mb-2">Key Additions</h4><ul class="list-disc list-inside space-y-1"><li>Clean inside all cabinets and drawers</li><li>Clean inside oven and dishwasher</li><li>Clean inside all closets</li><li>Clean heat vents and medicine cabinets</li></ul></div>
+                            <div><h4 class="font-semibold mb-2">Property Condition</h4><ul class="list-disc list-inside space-y-1"><li>Property must be empty and unfurnished</li><li>Water and electricity must be on</li></ul></div>
+                        </div>
+                    </div>
+                </details>
+                <details class="checklist-accordion bg-white p-6 rounded-lg shadow-md group">
+                    <summary class="flex justify-between items-center font-bold text-lg">Post-Construction Cleaning<svg class="w-5 h-5 transform group-open:rotate-180 transition-transform" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg></summary>
+                    <div class="mt-4 text-sm text-gray-700">
+                        <p class="mb-4 font-semibold">Specialized cleaning to remove all dust and debris from recent construction or renovation.</p>
+                        <div class="grid md:grid-cols-2 gap-x-8 gap-y-4">
+                            <div><h4 class="font-semibold mb-2">Primary Focus</h4><ul class="list-disc list-inside space-y-1"><li>Dust all surfaces, fans, and fixtures</li><li>Scrape paint off floors and other surfaces</li><li>Clean all windows (inside)</li><li>Deep clean of all cabinets (inside & out)</li><li>Thorough sweep and mop of all floors</li></ul></div>
+                            <div><h4 class="font-semibold mb-2">Areas Covered</h4><ul class="list-disc list-inside space-y-1"><li>Kitchen</li><li>Laundry Room</li><li>Bathrooms</li><li>Living Room & Bedrooms</li></ul></div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </section>
+
+        <!-- Interactive Calculator Section -->
+        <section id="calculator" class="bg-white p-8 rounded-2xl shadow-xl">
+            <div class="grid lg:grid-cols-2 gap-12">
+                <!-- Left Side: Inputs -->
+                <div>
+                    <div><h3 class="text-2xl font-bold mb-4 text-center brand-text">Get Your Instant Estimate</h3></div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-1">Step 1: Choose Your Cleaning Type</h3>
+                        <p class="text-gray-500 mb-4">What level of cleaning do you need?</p>
+                        <div id="cleaning-type" class="grid grid-cols-2 gap-4">
+                            <div class="option-card border-2 border-gray-200 p-4 rounded-lg cursor-pointer text-center" data-value="standard"><h4 class="font-semibold">Standard</h4><p class="text-xs text-gray-500">Recurring upkeep</p></div>
+                            <div class="option-card border-2 border-gray-200 p-4 rounded-lg cursor-pointer text-center selected-option" data-value="deep"><h4 class="font-semibold">Deep Clean</h4><p class="text-xs text-gray-500">Detailed, top-to-bottom</p></div>
+                            <div class="option-card border-2 border-gray-200 p-4 rounded-lg cursor-pointer text-center" data-value="move_in_out"><h4 class="font-semibold">Move-In / Move-Out</h4><p class="text-xs text-gray-500">For empty homes</p></div>
+                            <div class="option-card border-2 border-gray-200 p-4 rounded-lg cursor-pointer text-center" data-value="post_construction"><h4 class="font-semibold">Post-Construction</h4><p class="text-xs text-gray-500">Dust and debris removal</p></div>
+                        </div>
+                    </div>
+                    <div class="mt-8">
+                        <h3 class="text-xl font-bold mb-1">Step 2: Tell Us About Your Home</h3>
+                        <p class="text-gray-500 mb-4">This helps us understand the scope of work.</p>
+                        <div class="space-y-4">
+                            <div>
+                                <label for="sqft-select" class="text-sm font-medium text-gray-700">Square Footage</label>
+                                <select id="sqft-select" class="w-full mt-1 p-4 border-2 border-gray-200 rounded-lg brand-ring focus:border-green-500">
+                                    <option value="0">up to 1,000 sq ft</option><option value="1">1,001 – 1,500 sq ft</option><option value="2">1,501 – 2,000 sq ft</option><option value="3" selected>2,001 – 2,500 sq ft</option><option value="4">2,501 – 3,000 sq ft</option><option value="5">3,001 – 4,000 sq ft</option><option value="6">4,001 – 5,000 sq ft</option>
+                                </select>
+                            </div>
+                            <div class="grid grid-cols-2 gap-4">
+                                <div>
+                                    <label for="bed-select" class="text-sm font-medium text-gray-700">Bedrooms</label>
+                                    <select id="bed-select" class="w-full mt-1 p-4 border-2 border-gray-200 rounded-lg brand-ring focus:border-green-500">
+                                        <option>1</option><option>2</option><option selected>3</option><option>4</option><option>5</option><option>6+</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label for="bath-select" class="text-sm font-medium text-gray-700">Bathrooms</label>
+                                    <select id="bath-select" class="w-full mt-1 p-4 border-2 border-gray-200 rounded-lg brand-ring focus:border-green-500">
+                                        <option>1</option><option>2</option><option selected>3</option><option>4</option><option>5+</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-8">
+                        <h3 class="text-xl font-bold mb-1">Step 3: Customize with Add-Ons</h3>
+                        <p class="text-gray-500 mb-4">Select any extras you'd like.</p>
+                        <div id="addons" class="space-y-3">
+                            <label class="flex items-center p-3 bg-gray-50 rounded-lg hover:bg-gray-100 cursor-pointer"><input type="checkbox" data-price="24.99" class="h-5 w-5 rounded border-gray-300 text-green-600 brand-ring"><span class="ml-3 text-sm font-medium">Inside Fridge</span><span class="ml-auto text-sm text-gray-500">+$24.99</span></label>
+                            <label class="flex items-center p-3 bg-gray-50 rounded-lg hover:bg-gray-100 cursor-pointer"><input type="checkbox" data-price="24.99" class="h-5 w-5 rounded border-gray-300 text-green-600 brand-ring"><span class="ml-3 text-sm font-medium">Inside Oven</span><span class="ml-auto text-sm text-gray-500">+$24.99</span></label>
+                            <label class="flex items-center p-3 bg-gray-50 rounded-lg hover:bg-gray-100 cursor-pointer"><input type="checkbox" data-price="surcharge" data-surcharge="0.10" class="h-5 w-5 rounded border-gray-300 text-green-600 brand-ring"><span class="ml-3 text-sm font-medium">Heavy Pet Hair</span><span class="ml-auto text-sm text-gray-500">+10%</span></label>
+                            <label class="flex items-center p-3 bg-gray-50 rounded-lg hover:bg-gray-100 cursor-pointer"><input type="checkbox" data-price="39.99" class="h-5 w-5 rounded border-gray-300 text-green-600 brand-ring"><span class="ml-3 text-sm font-medium">12ft+ Ceilings / Ladder Work</span><span class="ml-auto text-sm text-gray-500">+$39.99</span></label>
+                        </div>
+                        <p class="text-xs text-gray-500 mt-4">Note: Interior windows, carpet shampooing, and excess trash removal are quoted separately after a walkthrough or photos.</p>
+                    </div>
+                </div>
+                <!-- Right Side: Quote Summary -->
+                <div class="brand-bg-light rounded-lg p-8 sticky top-8 self-start">
+                    <h3 class="text-2xl font-bold brand-text">Your Quote Summary</h3>
+                    <div class="mt-6 space-y-4">
+                        <div class="flex justify-between items-center"><p class="text-gray-600">Base Cleaning Price:</p><p id="base-price-display" class="font-semibold text-lg">$0.00</p></div>
+                        <div id="addons-summary" class="border-t border-b border-gray-200 py-4 space-y-2"></div>
+                        <div class="price-display p-4 rounded-lg mt-4"><div class="flex justify-between items-center"><p class="text-lg font-bold brand-text">Total Estimate:</p><p id="total-price-display" class="text-3xl font-extrabold brand-text">$0.00</p></div></div>
+                        <p class="text-xs text-gray-500 text-center mt-2 mb-6">Final price confirmed after a brief walkthrough. Sales tax will be added to the final invoice.</p>
+                    </div>
+                    <button id="book-cleaning-btn" class="cta-button w-full text-center brand-bg text-white font-bold rounded-lg px-8 py-4 text-lg shadow-lg">Book Your Cleaning</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Form Section -->
+        <section id="contact" class="mt-20 bg-white p-8 rounded-2xl shadow-xl">
+            <div id="contact-form-container">
+                <div class="text-center max-w-2xl mx-auto">
+                    <h2 class="text-3xl font-bold mb-2 brand-text">Ready for a Spotless Home?</h2>
+                    <p class="text-gray-600 mb-8">Fill out the form below or call us at <a href="tel:214-563-3349" class="font-semibold brand-text">214-563-3349</a> to schedule your service. You can also email us at <a href="mailto:EverCleanHousekeeping.co@gmail.com" class="font-semibold brand-text">EverCleanHousekeeping.co@gmail.com</a>.</p>
+                </div>
+                <!-- UPDATED: Removed action and method attributes -->
+                <form id="contact-form" class="max-w-xl mx-auto">
+                    <input type="hidden" name="quote_summary" id="quote-summary-input">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <input id="contact-name" type="text" name="name" placeholder="Your Name" required class="w-full p-3 border-2 border-gray-200 rounded-lg brand-ring focus:border-green-500">
+                        <input id="contact-email" type="email" name="email" placeholder="Your Email" required class="w-full p-3 border-2 border-gray-200 rounded-lg brand-ring focus:border-green-500">
+                    </div>
+                    <div class="mt-4"><input id="contact-phone" type="tel" name="phone" placeholder="Your Phone Number" required class="w-full p-3 border-2 border-gray-200 rounded-lg brand-ring focus:border-green-500"></div>
+                    <div class="mt-4"><input id="address-input" type="text" name="address" placeholder="Street Address" required class="w-full p-3 border-2 border-gray-200 rounded-lg brand-ring focus:border-green-500"></div>
+                    <div class="mt-4">
+                        <label for="date-input" class="text-sm font-medium text-gray-700">Preferred Cleaning Date</label>
+                        <input id="date-input" type="text" name="cleaning_date" placeholder="Select a date" required class="w-full mt-1 p-3 border-2 border-gray-200 rounded-lg brand-ring focus:border-green-500">
+                    </div>
+                    <div class="mt-4"><textarea id="contact-message" name="message" placeholder="Any additional notes for your cleaning?" rows="4" class="w-full p-3 border-2 border-gray-200 rounded-lg brand-ring focus:border-green-500"></textarea></div>
+                    <div class="text-center mt-6"><button type="submit" class="cta-button w-full md:w-auto brand-bg text-white font-bold rounded-lg px-12 py-4 text-lg shadow-lg">Request My Cleaning</button></div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-white mt-20">
+        <div class="container mx-auto px-6 py-8 text-center text-sm">
+            <img src="https://googleusercontent.com/file_content/4" alt="EverClean Housekeeping Logo" class="h-12 w-12 mx-auto mb-4" onerror="this.style.display='none'">
+            <p>&copy; 2025 EverClean Housekeeping. All Rights Reserved.</p>
+            <p class="mt-2 text-gray-400">A family-owned business serving DeSoto, Midlothian, Cedar Hill, and surrounding communities.</p>
+        </div>
+    </footer>
+
+    <!-- NEW: Flatpickr Calendar JS -->
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+    <script>
+        // This function needs to be in the global scope so the Google Maps callback can find it.
+        function initAutocomplete() {
+            const addressInput = document.getElementById('address-input');
+            if (addressInput) {
+                const options = {
+                    componentRestrictions: { country: "us" },
+                    fields: ["address_components", "geometry", "icon", "name"],
+                    types: ["address"],
+                };
+                const autocomplete = new google.maps.places.Autocomplete(addressInput, options);
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const pricingData = {
+                standard: [119.99, 149.99, 179.99, 209.99, 239.99, 279.99, 329.99],
+                multipliers: { standard: 1.0, deep: 1.4, move_in_out: 1.5, post_construction: 1.7 }
+            };
+            const cleaningTypeContainer = document.getElementById('cleaning-type');
+            const sqftSelect = document.getElementById('sqft-select');
+            const bedSelect = document.getElementById('bed-select');
+            const bathSelect = document.getElementById('bath-select');
+            const addonsContainer = document.getElementById('addons');
+            const basePriceDisplay = document.getElementById('base-price-display');
+            const totalPriceDisplay = document.getElementById('total-price-display');
+            const addonsSummaryContainer = document.getElementById('addons-summary');
+            const quoteSummaryInput = document.getElementById('quote-summary-input');
+            const contactForm = document.getElementById('contact-form');
+            const contactFormContainer = document.getElementById('contact-form-container');
+            const bookCleaningBtn = document.getElementById('book-cleaning-btn');
+            
+            // Initialize Flatpickr
+            flatpickr("#date-input", {
+                altInput: true,
+                altFormat: "F j, Y",
+                dateFormat: "Y-m-d",
+                minDate: "today"
+            });
+
+            let selectedCleaningType = 'deep';
+            let selectedSqftIndex = 3;
+            let currentQuote = 0;
+
+            function formatCurrency(amount) {
+                return new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(amount);
+            }
+
+            function calculateAndDisplayPrice() {
+                const standardPrice = pricingData.standard[selectedSqftIndex];
+                const multiplier = pricingData.multipliers[selectedCleaningType];
+                const basePrice = standardPrice * multiplier;
+                let addonsTotal = 0;
+                let petSurcharge = 0;
+                addonsSummaryContainer.innerHTML = '';
+                const addonCheckboxes = addonsContainer.querySelectorAll('input[type="checkbox"]:checked');
+                addonCheckboxes.forEach(checkbox => {
+                    const price = parseFloat(checkbox.dataset.price);
+                    const surcharge = parseFloat(checkbox.dataset.surcharge);
+                    const name = checkbox.nextElementSibling.textContent;
+                    let cost = 0;
+                    if (checkbox.dataset.price === 'surcharge') {
+                        petSurcharge = standardPrice * surcharge;
+                        cost = petSurcharge;
+                    } else {
+                        addonsTotal += price;
+                        cost = price;
+                    }
+                    const summaryItem = document.createElement('div');
+                    summaryItem.className = 'flex justify-between items-center text-sm';
+                    summaryItem.innerHTML = `<p class="text-gray-600">${name}</p><p class="font-medium">${formatCurrency(cost)}</p>`;
+                    addonsSummaryContainer.appendChild(summaryItem);
+                });
+                if (addonsSummaryContainer.innerHTML === '') {
+                    addonsSummaryContainer.innerHTML = '<p class="text-sm text-gray-400 text-center">No add-ons selected.</p>';
+                }
+                const totalPrice = basePrice + addonsTotal + petSurcharge;
+                currentQuote = totalPrice;
+                basePriceDisplay.textContent = formatCurrency(basePrice);
+                totalPriceDisplay.textContent = formatCurrency(totalPrice);
+            }
+
+            function populateQuoteSummary() {
+                const cleaningTypeText = document.querySelector(`#cleaning-type .option-card[data-value="${selectedCleaningType}"] h4`).textContent;
+                const sqftText = sqftSelect.options[sqftSelect.selectedIndex].text;
+                const bedText = bedSelect.value;
+                const bathText = bathSelect.value;
+                const addons = Array.from(addonsContainer.querySelectorAll('input[type="checkbox"]:checked'))
+                                  .map(cb => cb.nextElementSibling.textContent);
+
+                let summary = `SERVICE QUOTE DETAILS:\n`;
+                summary += `-----------------------\n`;
+                summary += `Service Type: ${cleaningTypeText}\n`;
+                summary += `Home Size: ${sqftText}\n`;
+                summary += `Bedrooms: ${bedText}\n`;
+                summary += `Bathrooms: ${bathText}\n`;
+                summary += `Add-ons: ${addons.length > 0 ? addons.join(', ') : 'None'}\n`;
+                summary += `Estimated Price: ${formatCurrency(currentQuote)}\n`;
+                
+                quoteSummaryInput.value = summary;
+            }
+
+            cleaningTypeContainer.addEventListener('click', function(e) {
+                const card = e.target.closest('.option-card');
+                if (!card) return;
+                selectedCleaningType = card.dataset.value;
+                cleaningTypeContainer.querySelectorAll('.option-card').forEach(c => c.classList.remove('selected-option'));
+                card.classList.add('selected-option');
+                calculateAndDisplayPrice();
+            });
+            sqftSelect.addEventListener('change', function() {
+                selectedSqftIndex = parseInt(this.value);
+                calculateAndDisplayPrice();
+            });
+            addonsContainer.addEventListener('change', function(e) {
+                if (e.target.type === 'checkbox') {
+                    calculateAndDisplayPrice();
+                }
+            });
+            
+            bookCleaningBtn.addEventListener('click', function() {
+                document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+            });
+            
+            contactForm.addEventListener("submit", function(e) {
+                e.preventDefault();
+                
+                populateQuoteSummary();
+
+                const form = e.target;
+                const data = new FormData(form);
+                const submitButton = form.querySelector('button[type="submit"]');
+                
+                submitButton.disabled = true;
+                submitButton.textContent = 'Submitting...';
+
+                // UPDATED FETCH LOGIC
+                fetch("/.netlify/functions/send-email", {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(Object.fromEntries(data))
+                }).then(response => {
+                    if (response.ok) {
+                        contactFormContainer.innerHTML = `
+                            <div class="text-center p-8">
+                                <h3 class="text-2xl font-bold brand-text">Thank You!</h3>
+                                <p class="text-gray-600 mt-4">Your request has been submitted successfully. We will be in touch shortly!</p>
+                            </div>
+                        `;
+                    } else {
+                       return response.json().then(data => {
+                            throw new Error(data.message || 'Something went wrong');
+                       });
+                    }
+                }).catch(error => {
+                    console.error('Submission Error:', error);
+                    alert(`Oops! There was a problem submitting your form. Error: ${error.message}`);
+                    submitButton.disabled = false;
+                    submitButton.textContent = 'Request My Cleaning';
+                });
+            });
+
+
+            calculateAndDisplayPrice();
+
+        });
+    </script>
+
+    <!-- 
+    --- HOW TO ACTIVATE YOUR NEW FEATURES ---
+
+    1. ACTIVATE GOOGLE ADDRESS AUTOCOMPLETE:
+        a. Go to the Google Cloud Console (https://console.cloud.google.com/) and create a new project.
+        b. In your project, search for and ENABLE BOTH the "Maps JavaScript API" AND the "Places API". This is the most common step people miss.
+        c. Go to "Credentials", click "Create Credentials", and select "API key".
+        d. Copy your new API key. It's VERY important to restrict this key. Click on the key, and under "Application restrictions", select "HTTP referrers (web sites)" and add your website's domain if you have one. If you're just testing, you can leave it unrestricted for now, but be sure to restrict it before you go live.
+        e. Paste your API key into the URL below, replacing "YOUR_API_KEY".
+        f. Add the completed <script> tag below right before the closing </body> tag of this file.
+
+        <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places&callback=initAutocomplete" async defer></script>
+
+    2. ACTIVATE YOUR NETLIFY FUNCTION (SendGrid):
+        Follow the steps in the guide to set up your SendGrid account and add your SENDGRID_API_KEY to your Netlify site's environment variables.
+    -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBCdaTKyutpsQYR86OYiqM0v8cU74ltvks&libraries=places&callback=initAutocomplete" async defer></script>
+
+</body>
+</html>
