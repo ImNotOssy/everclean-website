@@ -14,7 +14,7 @@ exports.handler = async function(event, context) {
   // 3. Create the email message
   const msg = {
     to: 'Oswaldoromero2005@gmail.com', // ** CHANGE THIS to the email you want to receive notifications
-    from: 'Oswaldoromero2005@gmail.com', // ** CHANGE THIS to your verified SendGrid sender email
+    from: 'client.evercleanhome.com', // ** CHANGE THIS to your verified SendGrid sender email
     subject: `New Cleaning Request from ${formData.name}`,
     // The email body is created using the form data.
     text: `You have a new cleaning request!\n\n
