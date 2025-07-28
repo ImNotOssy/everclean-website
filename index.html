@@ -216,7 +216,6 @@
                     <h2 class="text-3xl font-bold mb-2 brand-text">Ready for a Spotless Home?</h2>
                     <p class="text-gray-600 mb-8">Fill out the form below or call us at <a href="tel:214-563-3349" class="font-semibold brand-text">214-563-3349</a> to schedule your service. You can also email us at <a href="mailto:EverCleanHousekeeping.co@gmail.com" class="font-semibold brand-text">EverCleanHousekeeping.co@gmail.com</a>.</p>
                 </div>
-                <!-- UPDATED: Removed action and method attributes -->
                 <form id="contact-form" class="max-w-xl mx-auto">
                     <input type="hidden" name="quote_summary" id="quote-summary-input">
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -278,6 +277,7 @@
             const contactForm = document.getElementById('contact-form');
             const contactFormContainer = document.getElementById('contact-form-container');
             const bookCleaningBtn = document.getElementById('book-cleaning-btn');
+            const phoneInput = document.getElementById('contact-phone');
             
             // Initialize Flatpickr
             flatpickr("#date-input", {
@@ -349,6 +349,28 @@
                 quoteSummaryInput.value = summary;
             }
 
+            // NEW: Phone number formatting function
+            function formatPhoneNumber(event) {
+                const input = event.target;
+                // 1. Remove all non-digit characters
+                let digits = input.value.replace(/\D/g, '');
+                // 2. Limit to 10 digits
+                digits = digits.substring(0, 10);
+                // 3. Apply formatting
+                const areaCode = digits.substring(0, 3);
+                const middle = digits.substring(3, 6);
+                const last = digits.substring(6, 10);
+
+                if (digits.length > 6) {
+                    input.value = `(${areaCode}) ${middle}-${last}`;
+                } else if (digits.length > 3) {
+                    input.value = `(${areaCode}) ${middle}`;
+                } else if (digits.length > 0) {
+                    input.value = `(${areaCode}`;
+                }
+            }
+
+            // --- EVENT LISTENERS ---
             cleaningTypeContainer.addEventListener('click', function(e) {
                 const card = e.target.closest('.option-card');
                 if (!card) return;
@@ -370,6 +392,8 @@
             bookCleaningBtn.addEventListener('click', function() {
                 document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
             });
+
+            phoneInput.addEventListener('input', formatPhoneNumber); // Add event listener for phone formatting
             
             contactForm.addEventListener("submit", function(e) {
                 e.preventDefault();
@@ -383,7 +407,6 @@
                 submitButton.disabled = true;
                 submitButton.textContent = 'Submitting...';
 
-                // UPDATED FETCH LOGIC
                 fetch("/.netlify/functions/send-email", {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
