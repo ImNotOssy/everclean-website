@@ -6,6 +6,7 @@
     <title>EverClean Housekeeping - Professional Cleaning Services in DeSoto, TX</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <!-- NEW: Flatpickr Calendar CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
     <style>
         body {
@@ -85,6 +86,7 @@
 </head>
 <body class="bg-gray-50 text-gray-800">
 
+    <!-- Language Toggle -->
     <div class="bg-gray-800 text-white">
         <div class="container mx-auto px-6 py-2 flex justify-end items-center">
             <div class="lang-toggle bg-gray-700 rounded-full p-1 flex text-sm">
@@ -94,9 +96,10 @@
         </div>
     </div>
 
+    <!-- Header Section -->
     <header class="hero-bg">
         <div class="container mx-auto px-6 py-12 text-center">
-            <img src="https://googleusercontent.com/file_content/4" alt="EverClean Housekeeping Logo" class="h-24 w-24 mx-auto mb-4" onerror="this.style.display='none'">
+            <img src="https://i.imgur.com/6I3ca1O.png" alt="EverClean Housekeeping Logo" class="h-24 w-24 mx-auto mb-4" onerror="this.onerror=null; this.src='https://i.imgur.com/6I3ca1O.png';">
             <h1 data-translate="main_headline" class="text-4xl md:text-6xl font-extrabold brand-text leading-tight">
                 EverClean Housekeeping
             </h1>
@@ -106,8 +109,10 @@
         </div>
     </header>
 
+    <!-- Main Content -->
     <main class="container mx-auto px-6 py-16">
 
+        <!-- Service Checklists Section -->
         <section id="services" class="mb-20">
             <h2 data-translate="whats_included_headline" class="text-3xl font-bold text-center mb-10 brand-text">What's Included in Your Clean?</h2>
             <div class="max-w-4xl mx-auto space-y-4">
@@ -151,30 +156,10 @@
             </div>
         </section>
 
-        <section id="policies" class="mb-20">
-            <h2 class="text-3xl font-bold text-center mb-10 brand-text" data-translate="policies_headline">Our Policies & Frequently Asked Questions</h2>
-            <div class="max-w-4xl mx-auto space-y-8 bg-white p-8 rounded-2xl shadow-xl">
-                <div>
-                    <h3 class="text-xl font-bold brand-text" data-translate="policy_q1">1. What is your policy for new recurring clients?</h3>
-                    <p class="mt-2 text-gray-700" data-translate="policy_a1">To provide the best possible results, we require that the first cleaning service for all new recurring clients be our <strong>Deep Cleaning service</strong>. This allows us to bring your home to a high standard of cleanliness, making our subsequent <strong>Standard Cleaning</strong> visits more effective at maintaining that sparkle.</p>
-                </div>
-                <div>
-                    <h3 class="text-xl font-bold brand-text" data-translate="policy_q2">2. Do you offer discounts for regular service?</h3>
-                    <p class="mt-2 text-gray-700" data-translate="policy_a2">Absolutely! We believe in rewarding our loyal clients. After your initial Deep Clean, you will receive a <strong>15% discount</strong> on all regularly scheduled bi-weekly or weekly Standard Cleaning services.</p>
-                </div>
-                <div>
-                    <h3 class="text-xl font-bold brand-text" data-translate="policy_q3">3. What if I have to skip or reschedule a cleaning?</h3>
-                    <p class="mt-2 text-gray-700" data-translate="policy_a3">We understand that life happens! We kindly request at least <strong>48 hours' notice</strong> for any cancellations or rescheduling. Cancellations made within 48 hours of your appointment may be subject to a small cancellation fee. If a bi-weekly appointment is skipped, your next cleaning will be billed at the full, non-discounted Standard Cleaning rate to account for the extra work needed. Your 15% discount will resume on the following visit.</p>
-                </div>
-                <div>
-                    <h3 class="text-xl font-bold brand-text" data-translate="policy_q4">4. What if I need an extra Deep Clean for a special occasion?</h3>
-                    <p class="mt-2 text-gray-700" data-translate="policy_a4">We're happy to help! Please note that your recurring service discount applies exclusively to your regularly scheduled Standard Cleaning visits. Any additional services, like a one-time Deep Clean for a party or event, will be quoted and billed at the full, non-discounted rate.</p>
-                </div>
-            </div>
-        </section>
-
+        <!-- Interactive Calculator Section -->
         <section id="calculator" class="bg-white p-8 rounded-2xl shadow-xl">
             <div class="grid lg:grid-cols-2 gap-12">
+                <!-- Left Side: Inputs -->
                 <div>
                     <div><h3 data-translate="get_estimate_headline" class="text-2xl font-bold mb-4 text-center brand-text">Get Your Instant Estimate</h3></div>
                     <div>
@@ -226,6 +211,7 @@
                         <p data-translate="addons_note" class="text-xs text-gray-500 mt-4">Note: Interior windows and excess trash removal are quoted separately after a walkthrough or photos.</p>
                     </div>
                 </div>
+                <!-- Right Side: Quote Summary -->
                 <div class="brand-bg-light rounded-lg p-8 sticky top-8 self-start">
                     <h3 data-translate="quote_summary_headline" class="text-2xl font-bold brand-text">Your Quote Summary</h3>
                     <div class="mt-6 space-y-4">
@@ -247,6 +233,7 @@
             </div>
         </section>
 
+        <!-- Contact Form Section -->
         <section id="contact" class="mt-20 bg-white p-8 rounded-2xl shadow-xl">
             <div id="contact-form-container">
                 <div class="text-center max-w-2xl mx-auto">
@@ -276,16 +263,41 @@
                 </form>
             </div>
         </section>
+
+        <!-- Policies & FAQ Section -->
+        <section id="policies" class="my-20">
+            <h2 class="text-3xl font-bold text-center mb-10 brand-text" data-translate="policies_headline">Our Policies & Frequently Asked Questions</h2>
+            <div class="max-w-4xl mx-auto space-y-8 bg-white p-8 rounded-2xl shadow-xl">
+                <div>
+                    <h3 class="text-xl font-bold brand-text" data-translate="policy_q1">1. What is your policy for new recurring clients?</h3>
+                    <p class="mt-2 text-gray-700" data-translate="policy_a1">To provide the best possible results, we require that the first cleaning service for all new recurring clients be our <strong>Deep Cleaning service</strong>. This allows us to bring your home to a high standard of cleanliness, making our subsequent <strong>Standard Cleaning</strong> visits more effective at maintaining that sparkle.</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold brand-text" data-translate="policy_q2">2. Do you offer discounts for regular service?</h3>
+                    <p class="mt-2 text-gray-700" data-translate="policy_a2">Absolutely! We believe in rewarding our loyal clients. After your initial Deep Clean, you will receive a <strong>15% discount</strong> on all regularly scheduled bi-weekly or weekly Standard Cleaning services.</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold brand-text" data-translate="policy_q3">3. What if I have to skip or reschedule a cleaning?</h3>
+                    <p class="mt-2 text-gray-700" data-translate="policy_a3">We understand that life happens! We kindly request at least <strong>48 hours' notice</strong> for any cancellations or rescheduling. Cancellations made within 48 hours of your appointment may be subject to a small cancellation fee. If a bi-weekly appointment is skipped, your next cleaning will be billed at the full, non-discounted Standard Cleaning rate to account for the extra work needed. Your 15% discount will resume on the following visit.</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold brand-text" data-translate="policy_q4">4. What if I need an extra Deep Clean for a special occasion?</h3>
+                    <p class="mt-2 text-gray-700" data-translate="policy_a4">We're happy to help! Please note that your recurring service discount applies exclusively to your regularly scheduled Standard Cleaning visits. Any additional services, like a one-time Deep Clean for a party or event, will be quoted and billed at the full, non-discounted rate.</p>
+                </div>
+            </div>
+        </section>
+
     </main>
 
-    <footer class="bg-gray-800 text-white mt-20">
+    <footer class="bg-gray-800 text-white">
         <div class="container mx-auto px-6 py-8 text-center text-sm">
-            <img src="https://googleusercontent.com/file_content/4" alt="EverClean Housekeeping Logo" class="h-12 w-12 mx-auto mb-4" onerror="this.style.display='none'">
+            <img src="https://i.imgur.com/6I3ca1O.png" alt="EverClean Housekeeping Logo" class="h-12 w-12 mx-auto mb-4" onerror="this.onerror=null; this.src='https://i.imgur.com/6I3ca1O.png';">
             <p data-translate="footer_copyright">&copy; 2025 EverClean Housekeeping. All Rights Reserved.</p>
             <p data-translate="footer_desc" class="mt-2 text-gray-400">A family-owned business serving DeSoto, Midlothian, Cedar Hill, and surrounding communities in the DFW.</p>
         </div>
     </footer>
 
+    <!-- Flatpickr Calendar JS -->
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 
     <script>
@@ -305,16 +317,18 @@
 
                 autocomplete.addListener('place_changed', () => {
                     const place = autocomplete.getPlace();
-                    if (place.types && place.types.includes('street_address')) {
+                    // Check for a precise street address
+                    if (place.geometry && place.geometry.location && place.types.includes('street_address')) {
                         isAddressComplete = true;
                         addressError.classList.add('hidden');
                     } else {
                         isAddressComplete = false;
-                        addressInput.value = '';
+                        addressInput.value = ''; // Clear the input if not a valid address
                         addressError.classList.remove('hidden');
                     }
                 });
 
+                // Reset validation state on input
                 addressInput.addEventListener('input', () => {
                     isAddressComplete = false;
                 });
@@ -502,6 +516,7 @@
             const langEsBtn = document.getElementById('lang-es');
 
             function translatePage(lang) {
+                document.documentElement.lang = lang; // Set the lang attribute on the html tag
                 document.querySelectorAll('[data-translate]').forEach(el => {
                     const key = el.dataset.translate;
                     if (translations[lang] && translations[lang][key]) {
@@ -590,7 +605,7 @@
                     const name = checkbox.nextElementSibling.textContent;
                     let cost = 0;
                     if (checkbox.dataset.price === 'surcharge') {
-                        petSurcharge = standardPrice * surcharge;
+                        petSurcharge = basePrice * surcharge; // Calculate surcharge on base price
                         cost = petSurcharge;
                     } else {
                         addonsTotal += price;
@@ -603,6 +618,10 @@
                 });
                 if (addonsSummaryContainer.innerHTML === '') {
                     addonsSummaryContainer.innerHTML = '<p data-translate="no_addons" class="text-sm text-gray-400 text-center">No add-ons selected.</p>';
+                    // Ensure translation is applied if needed
+                    if (localStorage.getItem('language') === 'es') {
+                        addonsSummaryContainer.querySelector('p').textContent = 'No hay adicionales seleccionados.';
+                    }
                 }
                 const totalPrice = basePrice + addonsTotal + petSurcharge;
                 currentQuote = totalPrice;
@@ -625,7 +644,7 @@
                 summary += `Bedrooms: ${bedText}\n`;
                 summary += `Bathrooms: ${bathText}\n`;
                 summary += `Add-ons: ${addons.length > 0 ? addons.join(', ') : 'None'}\n`;
-                summary += `Estimated Price: ${formatCurrency(currentQuote)}\n`;
+                summary += `Estimated Price: ${formatCurrency(currentQuote)} + Tax\n`;
                 
                 quoteSummaryInput.value = summary;
             }
@@ -697,10 +716,11 @@
                 const form = e.target;
                 const data = new FormData(form);
                 const submitButton = form.querySelector('button[type="submit"]');
+                const originalButtonText = submitButton.textContent;
                 
                 submitButton.disabled = true;
                 submitButton.textContent = 'Submitting...';
-
+                
                 fetch("/.netlify/functions/send-email", {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
@@ -713,6 +733,9 @@
                                 <p data-translate="thank_you_desc" class="text-gray-600 mt-4">Your request has been submitted successfully. We will be in touch shortly!</p>
                             </div>
                         `;
+                         // Re-apply translation after updating content
+                        const savedLang = localStorage.getItem('language') || 'en';
+                        translatePage(savedLang);
                     } else {
                        return response.json().then(data => {
                             throw new Error(data.message || 'Something went wrong');
@@ -720,9 +743,14 @@
                     }
                 }).catch(error => {
                     console.error('Submission Error:', error);
-                    alert(`Oops! There was a problem submitting your form. Error: ${error.message}`);
+                    // Use a more user-friendly modal/message box instead of alert
+                    const errorDiv = document.createElement('div');
+                    errorDiv.className = 'text-red-600 text-center font-bold p-4';
+                    errorDiv.textContent = `Oops! There was a problem submitting your form. Please try again.`;
+                    form.prepend(errorDiv);
+
                     submitButton.disabled = false;
-                    submitButton.textContent = 'Request My Cleaning';
+                    submitButton.textContent = originalButtonText;
                 });
             });
 
@@ -733,7 +761,10 @@
 
         });
     </script>
-
+    <!-- 
+      IMPORTANT: You must replace 'YOUR_API_KEY' with your actual Google Maps Platform API key 
+      for the address autocomplete to work on your live website.
+    -->
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBCdaTKyutpsQYR86OYiqM0v8cU74ltvks&libraries=places&callback=initAutocomplete" async defer></script>
 
 </body>
