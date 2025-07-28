@@ -99,7 +99,7 @@
     <!-- Header Section -->
     <header class="hero-bg">
         <div class="container mx-auto px-6 py-12 text-center">
-            <img src="https://i.imgur.com/6I3ca1O.png" alt="EverClean Housekeeping Logo" class="h-24 w-24 mx-auto mb-4" onerror="this.onerror=null; this.src='https://i.imgur.com/6I3ca1O.png';">
+            <img src="https://i.imgur.com/6I3ca1O.png" alt="EverClean Housekeeping Logo" class="h-24 w-24 mx-auto mb-4" onerror="this.onerror=null; this.src='https://placehold.co/96x96/f0f5f0/54624C?text=Logo';">
             <h1 data-translate="main_headline" class="text-4xl md:text-6xl font-extrabold brand-text leading-tight">
                 EverClean Housekeeping
             </h1>
@@ -157,8 +157,9 @@
         </section>
 
         <!-- Interactive Calculator Section -->
-        <section id="calculator" class="bg-white p-8 rounded-2xl shadow-xl">
-            <div class="grid lg:grid-cols-2 gap-12">
+        <section id="calculator" class="bg-white p-4 md:p-8 rounded-2xl shadow-xl">
+            <!-- MOBILE RESPONSIVENESS FIX: Changed grid-cols-1 and lg:grid-cols-2 -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
                 <!-- Left Side: Inputs -->
                 <div>
                     <div><h3 data-translate="get_estimate_headline" class="text-2xl font-bold mb-4 text-center brand-text">Get Your Instant Estimate</h3></div>
@@ -212,7 +213,8 @@
                     </div>
                 </div>
                 <!-- Right Side: Quote Summary -->
-                <div class="brand-bg-light rounded-lg p-8 sticky top-8 self-start">
+                <!-- MOBILE RESPONSIVENESS FIX: Removed sticky positioning on mobile -->
+                <div class="brand-bg-light rounded-lg p-8 lg:sticky lg:top-8 self-start">
                     <h3 data-translate="quote_summary_headline" class="text-2xl font-bold brand-text">Your Quote Summary</h3>
                     <div class="mt-6 space-y-4">
                         <div class="flex justify-between items-center"><p data-translate="base_price_label" class="text-gray-600">Base Cleaning Price:</p><p id="base-price-display" class="font-semibold text-lg">$0.00</p></div>
@@ -234,7 +236,7 @@
         </section>
 
         <!-- Contact Form Section -->
-        <section id="contact" class="mt-20 bg-white p-8 rounded-2xl shadow-xl">
+        <section id="contact" class="mt-20 bg-white p-4 md:p-8 rounded-2xl shadow-xl">
             <div id="contact-form-container">
                 <div class="text-center max-w-2xl mx-auto">
                     <h2 data-translate="contact_headline" class="text-3xl font-bold mb-2 brand-text">Ready for a Spotless Home?</h2>
@@ -267,7 +269,7 @@
         <!-- Policies & FAQ Section -->
         <section id="policies" class="my-20">
             <h2 class="text-3xl font-bold text-center mb-10 brand-text" data-translate="policies_headline">Our Policies & Frequently Asked Questions</h2>
-            <div class="max-w-4xl mx-auto space-y-8 bg-white p-8 rounded-2xl shadow-xl">
+            <div class="max-w-4xl mx-auto space-y-8 bg-white p-6 md:p-8 rounded-2xl shadow-xl">
                 <div>
                     <h3 class="text-xl font-bold brand-text" data-translate="policy_q1">1. What is your policy for new recurring clients?</h3>
                     <p class="mt-2 text-gray-700" data-translate="policy_a1">To provide the best possible results, we require that the first cleaning service for all new recurring clients be our <strong>Deep Cleaning service</strong>. This allows us to bring your home to a high standard of cleanliness, making our subsequent <strong>Standard Cleaning</strong> visits more effective at maintaining that sparkle.</p>
@@ -291,7 +293,7 @@
 
     <footer class="bg-gray-800 text-white">
         <div class="container mx-auto px-6 py-8 text-center text-sm">
-            <img src="https://i.imgur.com/6I3ca1O.png" alt="EverClean Housekeeping Logo" class="h-12 w-12 mx-auto mb-4" onerror="this.onerror=null; this.src='https://i.imgur.com/6I3ca1O.png';">
+            <img src="https://i.imgur.com/6I3ca1O.png" alt="EverClean Housekeeping Logo" class="h-12 w-12 mx-auto mb-4" onerror="this.onerror=null; this.src='https://placehold.co/48x48/f0f5f0/54624C?text=Logo';">
             <p data-translate="footer_copyright">&copy; 2025 EverClean Housekeeping. All Rights Reserved.</p>
             <p data-translate="footer_desc" class="mt-2 text-gray-400">A family-owned business serving DeSoto, Midlothian, Cedar Hill, and surrounding communities in the DFW.</p>
         </div>
@@ -505,7 +507,7 @@
                     checklist_deep_plus: ["Limpieza detallada de zócalos","Limpiar el interior de las ventanas","Eliminar telarañas de techos y ventiladores","Limpiar las rejillas de ventilación","Limpiar interruptores y enchufes"],
                     checklist_deep_kitchen: ["Limpiar el exterior e interior de los gabinetes","Limpiar el refrigerador (por dentro y por fuera)"],
                     checklist_deep_bathroom: ["Limpiar la puerta de la ducha","Eliminar marcas de agua de las paredes","Limpiar las paredes del baño"],
-                    checklist_move_additions: ["Limpiar el interior de todos los gabinetes y cajones","Limpiar el interior del horno y lavavajillas","Limpiar el interior de todos los armarios","Limpiar las rejillas de calefacción y botiquines"],
+                    checklist_move_additions: ["Limpiar el interior de todos los gabinetes y cajones","Limpiar el interior del horno y lavavillillas","Limpiar el interior de todos los armarios","Limpiar las rejillas de calefacción y botiquines"],
                     checklist_move_conditions: ["La propiedad debe estar vacía y sin muebles","El agua y la electricidad deben estar conectadas"],
                     checklist_post_con_focus: ["Quitar el polvo de todas las superficies, ventiladores y accesorios","Raspar la pintura de los pisos y otras superficies","Limpiar todas las ventanas (interior)","Limpieza profunda de todos los gabinetes (interior y exterior)","Barrer y trapear a fondo todos los pisos"],
                     checklist_post_con_areas: ["Cocina","Lavandería","Baños","Sala y Dormitorios"],
