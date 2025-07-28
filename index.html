@@ -6,7 +6,6 @@
     <title>EverClean Housekeeping - Professional Cleaning Services in DeSoto, TX</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
-    <!-- NEW: Flatpickr Calendar CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
     <style>
         body {
@@ -86,7 +85,6 @@
 </head>
 <body class="bg-gray-50 text-gray-800">
 
-    <!-- Language Toggle -->
     <div class="bg-gray-800 text-white">
         <div class="container mx-auto px-6 py-2 flex justify-end items-center">
             <div class="lang-toggle bg-gray-700 rounded-full p-1 flex text-sm">
@@ -96,7 +94,6 @@
         </div>
     </div>
 
-    <!-- Header Section -->
     <header class="hero-bg">
         <div class="container mx-auto px-6 py-12 text-center">
             <img src="https://googleusercontent.com/file_content/4" alt="EverClean Housekeeping Logo" class="h-24 w-24 mx-auto mb-4" onerror="this.style.display='none'">
@@ -109,10 +106,8 @@
         </div>
     </header>
 
-    <!-- Main Content -->
     <main class="container mx-auto px-6 py-16">
 
-        <!-- Service Checklists Section -->
         <section id="services" class="mb-20">
             <h2 data-translate="whats_included_headline" class="text-3xl font-bold text-center mb-10 brand-text">What's Included in Your Clean?</h2>
             <div class="max-w-4xl mx-auto space-y-4">
@@ -156,10 +151,30 @@
             </div>
         </section>
 
-        <!-- Interactive Calculator Section -->
+        <section id="policies" class="mb-20">
+            <h2 class="text-3xl font-bold text-center mb-10 brand-text" data-translate="policies_headline">Our Policies & Frequently Asked Questions</h2>
+            <div class="max-w-4xl mx-auto space-y-8 bg-white p-8 rounded-2xl shadow-xl">
+                <div>
+                    <h3 class="text-xl font-bold brand-text" data-translate="policy_q1">1. What is your policy for new recurring clients?</h3>
+                    <p class="mt-2 text-gray-700" data-translate="policy_a1">To provide the best possible results, we require that the first cleaning service for all new recurring clients be our <strong>Deep Cleaning service</strong>. This allows us to bring your home to a high standard of cleanliness, making our subsequent <strong>Standard Cleaning</strong> visits more effective at maintaining that sparkle.</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold brand-text" data-translate="policy_q2">2. Do you offer discounts for regular service?</h3>
+                    <p class="mt-2 text-gray-700" data-translate="policy_a2">Absolutely! We believe in rewarding our loyal clients. After your initial Deep Clean, you will receive a <strong>15% discount</strong> on all regularly scheduled bi-weekly or weekly Standard Cleaning services.</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold brand-text" data-translate="policy_q3">3. What if I have to skip or reschedule a cleaning?</h3>
+                    <p class="mt-2 text-gray-700" data-translate="policy_a3">We understand that life happens! We kindly request at least <strong>48 hours' notice</strong> for any cancellations or rescheduling. Cancellations made within 48 hours of your appointment may be subject to a small cancellation fee. If a bi-weekly appointment is skipped, your next cleaning will be billed at the full, non-discounted Standard Cleaning rate to account for the extra work needed. Your 15% discount will resume on the following visit.</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold brand-text" data-translate="policy_q4">4. What if I need an extra Deep Clean for a special occasion?</h3>
+                    <p class="mt-2 text-gray-700" data-translate="policy_a4">We're happy to help! Please note that your recurring service discount applies exclusively to your regularly scheduled Standard Cleaning visits. Any additional services, like a one-time Deep Clean for a party or event, will be quoted and billed at the full, non-discounted rate.</p>
+                </div>
+            </div>
+        </section>
+
         <section id="calculator" class="bg-white p-8 rounded-2xl shadow-xl">
             <div class="grid lg:grid-cols-2 gap-12">
-                <!-- Left Side: Inputs -->
                 <div>
                     <div><h3 data-translate="get_estimate_headline" class="text-2xl font-bold mb-4 text-center brand-text">Get Your Instant Estimate</h3></div>
                     <div>
@@ -211,7 +226,6 @@
                         <p data-translate="addons_note" class="text-xs text-gray-500 mt-4">Note: Interior windows and excess trash removal are quoted separately after a walkthrough or photos.</p>
                     </div>
                 </div>
-                <!-- Right Side: Quote Summary -->
                 <div class="brand-bg-light rounded-lg p-8 sticky top-8 self-start">
                     <h3 data-translate="quote_summary_headline" class="text-2xl font-bold brand-text">Your Quote Summary</h3>
                     <div class="mt-6 space-y-4">
@@ -233,7 +247,6 @@
             </div>
         </section>
 
-        <!-- Contact Form Section -->
         <section id="contact" class="mt-20 bg-white p-8 rounded-2xl shadow-xl">
             <div id="contact-form-container">
                 <div class="text-center max-w-2xl mx-auto">
@@ -273,7 +286,6 @@
         </div>
     </footer>
 
-    <!-- NEW: Flatpickr Calendar JS -->
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 
     <script>
@@ -335,6 +347,15 @@
                     post_con_desc: "Specialized cleaning to remove all dust and debris from recent construction or renovation.",
                     primary_focus: "Primary Focus",
                     areas_covered: "Areas Covered",
+                    policies_headline: "Our Policies & Frequently Asked Questions",
+                    policy_q1: "1. What is your policy for new recurring clients?",
+                    policy_a1: "To provide the best possible results, we require that the first cleaning service for all new recurring clients be our <strong>Deep Cleaning service</strong>. This allows us to bring your home to a high standard of cleanliness, making our subsequent <strong>Standard Cleaning</strong> visits more effective at maintaining that sparkle.",
+                    policy_q2: "2. Do you offer discounts for regular service?",
+                    policy_a2: "Absolutely! We believe in rewarding our loyal clients. After your initial Deep Clean, you will receive a <strong>15% discount</strong> on all regularly scheduled bi-weekly or weekly Standard Cleaning services.",
+                    policy_q3: "3. What if I have to skip or reschedule a cleaning?",
+                    policy_a3: "We understand that life happens! We kindly request at least <strong>48 hours' notice</strong> for any cancellations or rescheduling. Cancellations made within 48 hours of your appointment may be subject to a small cancellation fee. If a bi-weekly appointment is skipped, your next cleaning will be billed at the full, non-discounted Standard Cleaning rate to account for the extra work needed. Your 15% discount will resume on the following visit.",
+                    policy_q4: "4. What if I need an extra Deep Clean for a special occasion?",
+                    policy_a4: "We're happy to help! Please note that your recurring service discount applies exclusively to your regularly scheduled Standard Cleaning visits. Any additional services, like a one-time Deep Clean for a party or event, will be quoted and billed at the full, non-discounted rate.",
                     get_estimate_headline: "Get Your Instant Estimate",
                     step1_headline: "Step 1: Choose Your Cleaning Type",
                     step1_desc: "What level of cleaning do you need?",
@@ -412,6 +433,15 @@
                     post_con_desc: "Limpieza especializada para eliminar todo el polvo y los escombros de una construcción o renovación reciente.",
                     primary_focus: "Enfoque Principal",
                     areas_covered: "Áreas Cubiertas",
+                    policies_headline: "Nuestras Políticas y Preguntas Frecuentes",
+                    policy_q1: "1. ¿Cuál es su política para nuevos clientes recurrentes?",
+                    policy_a1: "Para asegurar los mejores resultados posibles, requerimos que el primer servicio de limpieza para todos los nuevos clientes recurrentes sea nuestro <strong>servicio de Limpieza Profunda</strong>. Esto nos permite llevar su hogar a un alto estándar de limpieza, haciendo que nuestras visitas posteriores de <strong>Limpieza Estándar</strong> sean más efectivas para mantener ese brillo.",
+                    policy_q2: "2. ¿Ofrecen descuentos por servicio regular?",
+                    policy_a2: "¡Absolutamente! Creemos en recompensar a nuestros clientes leales. Después de su Limpieza Profunda inicial, recibirá un <strong>descuento del 15%</strong> en todos los servicios de Limpieza Estándar programados regularmente de forma quincenal o semanal.",
+                    policy_q3: "3. ¿Qué pasa si tengo que omitir o reprogramar una limpieza?",
+                    policy_a3: "¡Entendemos que surgen imprevistos! Le pedimos amablemente un preaviso de al menos <strong>48 horas</strong> para cualquier cancelación o reprogramación. Las cancelaciones realizadas dentro de las 48 horas de su cita pueden estar sujetas a una pequeña tarifa de cancelación. Si se omite una cita quincenal, su próxima limpieza se facturará a la tarifa completa, sin descuento, de Limpieza Estándar para compensar el trabajo adicional requerido. Su descuento del 15% se reanudará en la siguiente visita.",
+                    policy_q4: "4. ¿Qué pasa si necesito una Limpieza Profunda extra para una ocasión especial?",
+                    policy_a4: "¡Estamos felices de ayudar! Tenga en cuenta que su descuento de servicio recurrente se aplica exclusivamente a sus visitas de Limpieza Estándar programadas regularmente. Cualquier servicio adicional o diferente, como una Limpieza Profunda única para una fiesta o evento, se cotizará y facturará por separado a sus tarifas completas, sin descuento.",
                     get_estimate_headline: "Obtenga su Estimación Instantánea",
                     step1_headline: "Paso 1: Elija su Tipo de Limpieza",
                     step1_desc: "¿Qué nivel de limpieza necesita?",
