@@ -216,8 +216,16 @@
                     <div class="mt-6 space-y-4">
                         <div class="flex justify-between items-center"><p data-translate="base_price_label" class="text-gray-600">Base Cleaning Price:</p><p id="base-price-display" class="font-semibold text-lg">$0.00</p></div>
                         <div id="addons-summary" class="border-t border-b border-gray-200 py-4 space-y-2"></div>
-                        <div class="price-display p-4 rounded-lg mt-4"><div class="flex justify-between items-center"><p data-translate="total_estimate_label" class="text-lg font-bold brand-text">Total Estimate:</p><p id="total-price-display" class="text-3xl font-extrabold brand-text">$0.00</p></div></div>
-                        <p data-translate="quote_summary_note" class="text-xs text-gray-500 text-center mt-2 mb-6">Final price confirmed after a brief walkthrough. Sales tax will be added to the final invoice.</p>
+                        <div class="price-display p-4 rounded-lg mt-4">
+                            <div class="flex justify-between items-center">
+                                <p data-translate="total_estimate_label" class="text-lg font-bold brand-text">Total Estimate:</p>
+                                <div class="flex items-baseline space-x-2">
+                                    <p id="total-price-display" class="text-3xl font-extrabold brand-text">$0.00</p>
+                                    <span data-translate="plus_tax" class="text-sm font-semibold brand-text">+ Tax</span>
+                                </div>
+                            </div>
+                        </div>
+                        <p data-translate="quote_summary_note" class="text-xs text-gray-500 text-center mt-2 mb-6">Final price confirmed after a brief walkthrough. Tax added where applicable.</p>
                     </div>
                     <button id="book-cleaning-btn" data-translate="book_cleaning_btn" class="cta-button w-full text-center brand-bg text-white font-bold rounded-lg px-8 py-4 text-lg shadow-lg">Book Your Cleaning</button>
                 </div>
@@ -229,15 +237,20 @@
             <div id="contact-form-container">
                 <div class="text-center max-w-2xl mx-auto">
                     <h2 data-translate="contact_headline" class="text-3xl font-bold mb-2 brand-text">Ready for a Spotless Home?</h2>
-                    <p data-translate="contact_desc" class="text-gray-600 mb-8">Fill out the form below or call us at <a href="tel:214-563-3349" class="font-semibold brand-text">214-563-3349</a> to schedule your service. You can also email us at <a href="mailto:EverCleanHousekeeping.co@gmail.com" class="font-semibold brand-text">EverCleanHousekeeping.co@gmail.com</a>.</p>
+                    <p data-translate="contact_desc" class="text-gray-600 mb-4">Fill out the form below to request a cleaning.</p>
+                    <p data-translate="contact_disclaimer" class="text-xs text-gray-500 mb-8">Please note this is a request and not a final booking. We will contact you via your preferred method (phone or email) to confirm details and schedule your appointment.</p>
                 </div>
                 <form id="contact-form" class="max-w-xl mx-auto">
                     <input type="hidden" name="quote_summary" id="quote-summary-input">
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <input id="contact-name" type="text" name="name" data-translate-placeholder="form_name" placeholder="Your Name" required class="w-full p-3 border-2 border-gray-200 rounded-lg brand-ring focus:border-green-500">
-                        <input id="contact-email" type="email" name="email" data-translate-placeholder="form_email" placeholder="Your Email" required class="w-full p-3 border-2 border-gray-200 rounded-lg brand-ring focus:border-green-500">
+                        <!-- Email and Phone are no longer required by default -->
+                        <input id="contact-email" type="email" name="email" data-translate-placeholder="form_email" placeholder="Your Email" class="w-full p-3 border-2 border-gray-200 rounded-lg brand-ring focus:border-green-500">
                     </div>
-                    <div class="mt-4"><input id="contact-phone" type="tel" name="phone" data-translate-placeholder="form_phone" placeholder="Your Phone Number" required class="w-full p-3 border-2 border-gray-200 rounded-lg brand-ring focus:border-green-500"></div>
+                    <div class="mt-4"><input id="contact-phone" type="tel" name="phone" data-translate-placeholder="form_phone" placeholder="Your Phone Number" class="w-full p-3 border-2 border-gray-200 rounded-lg brand-ring focus:border-green-500"></div>
+                    <!-- NEW: Error message for contact method validation -->
+                    <span id="contact-error" data-translate="form_contact_error" class="text-red-600 text-sm mt-1 hidden">Please provide either an email or a phone number.</span>
+                    
                     <div class="mt-4">
                         <input id="address-input" type="text" name="address" data-translate-placeholder="form_address" placeholder="Street Address" required class="w-full p-3 border-2 border-gray-200 rounded-lg brand-ring focus:border-green-500">
                         <span id="address-error" data-translate="form_address_error" class="text-red-600 text-sm mt-1 hidden">Please select a full, valid address from the suggestions.</span>
@@ -345,15 +358,18 @@
                     quote_summary_headline: "Your Quote Summary",
                     base_price_label: "Base Cleaning Price:",
                     total_estimate_label: "Total Estimate:",
-                    quote_summary_note: "Final price confirmed after a brief walkthrough. Sales tax will be added to the final invoice.",
+                    plus_tax: "+ Tax",
+                    quote_summary_note: "Final price confirmed after a brief walkthrough. Tax added where applicable.",
                     book_cleaning_btn: "Book Your Cleaning",
                     contact_headline: "Ready for a Spotless Home?",
-                    contact_desc: `Fill out the form below or call us at <a href="tel:214-563-3349" class="font-semibold brand-text">214-563-3349</a> to schedule your service. You can also email us at <a href="mailto:EverCleanHousekeeping.co@gmail.com" class="font-semibold brand-text">EverCleanHousekeeping.co@gmail.com</a>.`,
+                    contact_desc: "Fill out the form below to request a cleaning.",
+                    contact_disclaimer: "Please note this is a request and not a final booking. We will contact you via your preferred method (phone or email) to confirm details and schedule your appointment.",
                     form_name: "Your Name",
                     form_email: "Your Email",
                     form_phone: "Your Phone Number",
                     form_address: "Street Address",
                     form_address_error: "Please select a full, valid address from the suggestions.",
+                    form_contact_error: "Please provide either an email or a phone number.",
                     form_date_label: "Preferred Cleaning Date",
                     form_date_placeholder: "Select a date",
                     form_message: "Any additional notes for your cleaning?",
@@ -418,15 +434,18 @@
                     quote_summary_headline: "Resumen de su Cotización",
                     base_price_label: "Precio Base de Limpieza:",
                     total_estimate_label: "Estimación Total:",
-                    quote_summary_note: "El precio final se confirma después de una breve visita. El impuesto sobre las ventas se añadirá a la factura final.",
+                    plus_tax: "+ Impuestos",
+                    quote_summary_note: "El precio final se confirma después de una breve visita. Se añadirán impuestos donde corresponda.",
                     book_cleaning_btn: "Reservar su Limpieza",
                     contact_headline: "¿Listo para un Hogar Impecable?",
-                    contact_desc: `Llene el siguiente formulario o llámenos al <a href="tel:214-563-3349" class="font-semibold brand-text">214-563-3349</a> para programar su servicio. También puede enviarnos un correo electrónico a <a href="mailto:EverCleanHousekeeping.co@gmail.com" class="font-semibold brand-text">EverCleanHousekeeping.co@gmail.com</a>.`,
+                    contact_desc: "Llene el siguiente formulario para solicitar una limpieza.",
+                    contact_disclaimer: "Tenga en cuenta que esta es una solicitud y no una reserva final. Nos pondremos en contacto con usted a través de su método preferido (teléfono o correo electrónico) para confirmar los detalles y programar su cita.",
                     form_name: "Su Nombre",
                     form_email: "Su Correo Electrónico",
                     form_phone: "Su Número de Teléfono",
                     form_address: "Dirección",
                     form_address_error: "Por favor, seleccione una dirección completa y válida de las sugerencias.",
+                    form_contact_error: "Por favor, proporcione un correo electrónico o un número de teléfono.",
                     form_date_label: "Fecha de Limpieza Preferida",
                     form_date_placeholder: "Seleccione una fecha",
                     form_message: "¿Alguna nota adicional para su limpieza?",
@@ -479,7 +498,6 @@
                     }
                 });
 
-                // Update active button
                 if (lang === 'es') {
                     langEsBtn.classList.add('active');
                     langEnBtn.classList.remove('active');
@@ -487,15 +505,12 @@
                     langEnBtn.classList.add('active');
                     langEsBtn.classList.remove('active');
                 }
-                // Save preference
                 localStorage.setItem('language', lang);
             }
 
             langEnBtn.addEventListener('click', () => translatePage('en'));
             langEsBtn.addEventListener('click', () => translatePage('es'));
             
-            // --- END TRANSLATION LOGIC ---
-
             const pricingData = {
                 standard: [119.99, 149.99, 179.99, 209.99, 239.99, 279.99, 329.99],
                 multipliers: { standard: 1.0, deep: 1.4, move_in_out: 1.5, post_construction: 1.7 }
@@ -513,6 +528,7 @@
             const contactFormContainer = document.getElementById('contact-form-container');
             const bookCleaningBtn = document.getElementById('book-cleaning-btn');
             const phoneInput = document.getElementById('contact-phone');
+            const emailInput = document.getElementById('contact-email');
             
             flatpickr("#date-input", {
                 altInput: true,
@@ -600,7 +616,6 @@
                 }
             }
 
-            // --- EVENT LISTENERS ---
             cleaningTypeContainer.addEventListener('click', function(e) {
                 const card = e.target.closest('.option-card');
                 if (!card) return;
@@ -627,6 +642,17 @@
             
             contactForm.addEventListener("submit", function(e) {
                 e.preventDefault();
+
+                const phoneValue = phoneInput.value.trim();
+                const emailValue = emailInput.value.trim();
+                const contactError = document.getElementById('contact-error');
+
+                if (!phoneValue && !emailValue) {
+                    contactError.classList.remove('hidden');
+                    return;
+                } else {
+                    contactError.classList.add('hidden');
+                }
 
                 if (!isAddressComplete) {
                     const addressError = document.getElementById('address-error');
@@ -671,22 +697,12 @@
 
 
             calculateAndDisplayPrice();
-            // Check for saved language preference
             const savedLang = localStorage.getItem('language') || 'en';
             translatePage(savedLang);
 
         });
     </script>
 
-    <!-- 
-    --- HOW TO ACTIVATE YOUR NEW FEATURES ---
-
-    1. ACTIVATE GOOGLE ADDRESS AUTOCOMPLETE:
-        <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places&callback=initAutocomplete" async defer></script>
-
-    2. ACTIVATE YOUR NETLIFY FUNCTION (SendGrid):
-        Follow the steps in the guide to set up your SendGrid account and add your SENDGRID_API_KEY to your Netlify site's environment variables.
-    -->
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBCdaTKyutpsQYR86OYiqM0v8cU74ltvks&libraries=places&callback=initAutocomplete" async defer></script>
 
 </body>
