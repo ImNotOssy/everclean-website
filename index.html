@@ -178,6 +178,7 @@
                         <div class="space-y-4">
                             <div>
                                 <label for="sqft-select" data-translate="sqft_label" class="text-sm font-medium text-gray-700">Square Footage</label>
+                                <p data-translate="sqft_disclaimer" class="text-xs italic text-gray-500 mt-1">Not sure? Select your best guess. We will verify the correct square footage and confirm the final price when we contact you.</p>
                                 <select id="sqft-select" class="w-full mt-1 p-4 border-2 border-gray-200 rounded-lg brand-ring focus:border-green-500" data-translate-options="sqft_options">
                                     <option value="0">up to 1,000 sq ft</option><option value="1">1,001 – 1,500 sq ft</option><option value="2">1,501 – 2,000 sq ft</option><option value="3" selected>2,001 – 2,500 sq ft</option><option value="4">2,501 – 3,000 sq ft</option><option value="5">3,001 – 4,000 sq ft</option><option value="6">4,001 – 5,000 sq ft</option>
                                 </select>
@@ -244,11 +245,9 @@
                     <input type="hidden" name="quote_summary" id="quote-summary-input">
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <input id="contact-name" type="text" name="name" data-translate-placeholder="form_name" placeholder="Your Name" required class="w-full p-3 border-2 border-gray-200 rounded-lg brand-ring focus:border-green-500">
-                        <!-- Email and Phone are no longer required by default -->
                         <input id="contact-email" type="email" name="email" data-translate-placeholder="form_email" placeholder="Your Email" class="w-full p-3 border-2 border-gray-200 rounded-lg brand-ring focus:border-green-500">
                     </div>
                     <div class="mt-4"><input id="contact-phone" type="tel" name="phone" data-translate-placeholder="form_phone" placeholder="Your Phone Number" class="w-full p-3 border-2 border-gray-200 rounded-lg brand-ring focus:border-green-500"></div>
-                    <!-- NEW: Error message for contact method validation -->
                     <span id="contact-error" data-translate="form_contact_error" class="text-red-600 text-sm mt-1 hidden">Please provide either an email or a phone number.</span>
                     
                     <div class="mt-4">
@@ -346,6 +345,7 @@
                     step2_headline: "Step 2: Tell Us About Your Home",
                     step2_desc: "This helps us understand the scope of work.",
                     sqft_label: "Square Footage",
+                    sqft_disclaimer: "Not sure? Select your best guess. We will verify the correct square footage and confirm the final price when we contact you.",
                     bedrooms_label: "Bedrooms",
                     bathrooms_label: "Bathrooms",
                     step3_headline: "Step 3: Customize with Add-Ons",
@@ -422,6 +422,7 @@
                     step2_headline: "Paso 2: Cuéntenos Sobre su Hogar",
                     step2_desc: "Esto nos ayuda a entender el alcance del trabajo.",
                     sqft_label: "Pies Cuadrados",
+                    sqft_disclaimer: "¿No está seguro? Seleccione su mejor estimación. Verificaremos los pies cuadrados correctos y confirmaremos el precio final cuando nos comuniquemos con usted.",
                     bedrooms_label: "Dormitorios",
                     bathrooms_label: "Baños",
                     step3_headline: "Paso 3: Personalice con Adicionales",
