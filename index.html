@@ -310,25 +310,26 @@
             if (addressInput) {
                 const options = {
                     componentRestrictions: { country: "us" },
-                    fields: ["address_components", "geometry", "types"],
+                    fields: ["address_components", "formatted_address", "geometry", "types"],
                     types: ["address"],
                 };
                 const autocomplete = new google.maps.places.Autocomplete(addressInput, options);
 
                 autocomplete.addListener('place_changed', () => {
                     const place = autocomplete.getPlace();
-                    // Check for a precise street address
-                    if (place.geometry && place.geometry.location && place.types.includes('street_address')) {
+                    // *** BUG FIX: Check for address_components instead of a specific type ***
+                    if (place && place.address_components) {
                         isAddressComplete = true;
                         addressError.classList.add('hidden');
                     } else {
+                        // This case now only runs if the user types something and doesn't select a valid place.
                         isAddressComplete = false;
-                        addressInput.value = ''; // Clear the input if not a valid address
-                        addressError.classList.remove('hidden');
+                        // We don't clear the input here, to allow the user to correct typos.
+                        // The final validation happens on form submission.
                     }
                 });
 
-                // Reset validation state on input
+                // Reset validation state on input so the user can type freely
                 addressInput.addEventListener('input', () => {
                     isAddressComplete = false;
                 });
@@ -704,6 +705,7 @@
                     contactError.classList.add('hidden');
                 }
 
+                // *** BUG FIX: Final check for address validity on submit ***
                 if (!isAddressComplete) {
                     const addressError = document.getElementById('address-error');
                     addressError.classList.remove('hidden');
