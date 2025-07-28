@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EverClean Housekeeping - Professional Cleaning Services in DeSoto, TX</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn/tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
     <!-- NEW: Flatpickr Calendar CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
@@ -77,20 +77,35 @@
             color: #54624C;
             font-weight: 600;
         }
+        /* Language Toggle Styles */
+        .lang-toggle button.active {
+            background-color: #8E9E82;
+            color: white;
+        }
     </style>
 </head>
 <body class="bg-gray-50 text-gray-800">
+
+    <!-- Language Toggle -->
+    <div class="bg-gray-800 text-white">
+        <div class="container mx-auto px-6 py-2 flex justify-end items-center">
+            <div class="lang-toggle bg-gray-700 rounded-full p-1 flex text-sm">
+                <button id="lang-en" class="px-3 py-1 rounded-full active">English</button>
+                <button id="lang-es" class="px-3 py-1 rounded-full">Español</button>
+            </div>
+        </div>
+    </div>
 
     <!-- Header Section -->
     <header class="hero-bg">
         <div class="container mx-auto px-6 py-12 text-center">
             <img src="https://googleusercontent.com/file_content/4" alt="EverClean Housekeeping Logo" class="h-24 w-24 mx-auto mb-4" onerror="this.style.display='none'">
-            <h1 class="text-4xl md:text-6xl font-extrabold brand-text leading-tight">
+            <h1 data-translate="main_headline" class="text-4xl md:text-6xl font-extrabold brand-text leading-tight">
                 EverClean Housekeeping
             </h1>
-            <p class="mt-4 text-lg text-gray-600">Your Local, Family-Owned & Fully Insured Cleaning Experts.</p>
-            <p class="text-md text-gray-500">Proudly serving DeSoto, Midlothian, and the surrounding DFW area.</p>
-            <a href="#calculator" class="cta-button mt-8 inline-block brand-bg text-white font-bold rounded-lg px-8 py-4 text-lg shadow-lg">Get an Instant Quote</a>
+            <p data-translate="tagline" class="mt-4 text-lg text-gray-600">Your Local, Family-Owned & Home Cleaning Experts.</p>
+            <p data-translate="service_area" class="text-md text-gray-500">Proudly serving the Dallas/Fort Worth area, including Waxahachie and Midlothian</p>
+            <a href="#calculator" data-translate="get_quote_btn" class="cta-button mt-8 inline-block brand-bg text-white font-bold rounded-lg px-8 py-4 text-lg shadow-lg">Get an Instant Quote</a>
         </div>
     </header>
 
@@ -99,42 +114,42 @@
 
         <!-- Service Checklists Section -->
         <section id="services" class="mb-20">
-            <h2 class="text-3xl font-bold text-center mb-10 brand-text">What's Included in Your Clean?</h2>
+            <h2 data-translate="whats_included_headline" class="text-3xl font-bold text-center mb-10 brand-text">What's Included in Your Clean?</h2>
             <div class="max-w-4xl mx-auto space-y-4">
                 <details class="checklist-accordion bg-white p-6 rounded-lg shadow-md group">
-                    <summary class="flex justify-between items-center font-bold text-lg">Standard Cleaning<svg class="w-5 h-5 transform group-open:rotate-180 transition-transform" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg></summary>
+                    <summary class="flex justify-between items-center font-bold text-lg"><span data-translate="service_standard">Standard Cleaning</span><svg class="w-5 h-5 transform group-open:rotate-180 transition-transform" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg></summary>
                     <div class="mt-4 grid md:grid-cols-2 gap-x-8 gap-y-4 text-sm text-gray-700">
-                        <div><h4 class="font-semibold mb-2">Kitchen</h4><ul class="list-disc list-inside space-y-1"><li>Clean exterior of all appliances</li><li>Clean tables and countertops</li><li>Clean and disinfect sink</li><li>Clean exterior of cabinets</li><li>Sweep and mop floors</li></ul></div>
-                        <div><h4 class="font-semibold mb-2">Bathrooms</h4><ul class="list-disc list-inside space-y-1"><li>Clean bathtub/shower</li><li>Disinfect sinks and polish fixtures</li><li>Clean and disinfect toilet</li><li>Clean mirrors</li><li>Sweep and mop floors</li></ul></div>
-                        <div><h4 class="font-semibold mb-2">Bedrooms</h4><ul class="list-disc list-inside space-y-1"><li>Dust dressers, lamps, picture frames</li><li>Dust ceiling fan</li><li>Clean mirrors</li><li>Sweep and mop floors</li></ul></div>
-                        <div><h4 class="font-semibold mb-2">All Common Areas</h4><ul class="list-disc list-inside space-y-1"><li>Organize cushions</li><li>Dust all decorations and surfaces</li><li>Basic organization</li><li>Sweep and mop floors</li></ul></div>
+                        <div><h4 data-translate="kitchen" class="font-semibold mb-2">Kitchen</h4><ul class="list-disc list-inside space-y-1" data-translate-list="checklist_standard_kitchen"><li>Clean exterior of all appliances</li><li>Clean tables and countertops</li><li>Clean and disinfect sink</li><li>Clean exterior of cabinets</li><li>Sweep and mop floors</li></ul></div>
+                        <div><h4 data-translate="bathrooms" class="font-semibold mb-2">Bathrooms</h4><ul class="list-disc list-inside space-y-1" data-translate-list="checklist_standard_bathrooms"><li>Clean bathtub/shower</li><li>Disinfect sinks and polish fixtures</li><li>Clean and disinfect toilet</li><li>Clean mirrors</li><li>Sweep and mop floors</li></ul></div>
+                        <div><h4 data-translate="bedrooms" class="font-semibold mb-2">Bedrooms</h4><ul class="list-disc list-inside space-y-1" data-translate-list="checklist_standard_bedrooms"><li>Dust dressers, lamps, picture frames</li><li>Dust ceiling fan</li><li>Clean mirrors</li><li>Sweep and mop floors</li></ul></div>
+                        <div><h4 data-translate="common_areas" class="font-semibold mb-2">All Common Areas</h4><ul class="list-disc list-inside space-y-1" data-translate-list="checklist_standard_common"><li>Organize cushions</li><li>Dust all decorations and surfaces</li><li>Basic organization</li><li>Sweep and mop floors</li></ul></div>
                     </div>
                 </details>
                 <details class="checklist-accordion bg-white p-6 rounded-lg shadow-md group">
-                    <summary class="flex justify-between items-center font-bold text-lg">Deep Cleaning<svg class="w-5 h-5 transform group-open:rotate-180 transition-transform" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg></summary>
+                    <summary class="flex justify-between items-center font-bold text-lg"><span data-translate="service_deep">Deep Cleaning</span><svg class="w-5 h-5 transform group-open:rotate-180 transition-transform" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg></summary>
                     <div class="mt-4 grid md:grid-cols-2 gap-x-8 gap-y-4 text-sm text-gray-700">
-                        <div><h4 class="font-semibold mb-2">Includes Everything in Standard, PLUS:</h4><ul class="list-disc list-inside space-y-1 font-semibold brand-text"><li>Detailed baseboard cleaning</li><li>Clean interior of windows</li><li>Remove cobwebs from ceilings & fans</li><li>Clean air vents</li><li>Clean switches/power outlets</li></ul></div>
-                        <div><h4 class="font-semibold mb-2">Kitchen Focus</h4><ul class="list-disc list-inside space-y-1"><li>Clean exterior and interior of cabinets</li><li>Clean refrigerator (inside & out)</li></ul></div>
-                        <div><h4 class="font-semibold mb-2">Bathroom Focus</h4><ul class="list-disc list-inside space-y-1"><li>Clean shower door</li><li>Remove water marks from walls</li><li>Clean bathroom walls</li></ul></div>
+                        <div><h4 data-translate="deep_includes" class="font-semibold mb-2">Includes Everything in Standard, PLUS:</h4><ul class="list-disc list-inside space-y-1 font-semibold brand-text" data-translate-list="checklist_deep_plus"><li>Detailed baseboard cleaning</li><li>Clean interior of windows</li><li>Remove cobwebs from ceilings & fans</li><li>Clean air vents</li><li>Clean switches/power outlets</li></ul></div>
+                        <div><h4 data-translate="kitchen_focus" class="font-semibold mb-2">Kitchen Focus</h4><ul class="list-disc list-inside space-y-1" data-translate-list="checklist_deep_kitchen"><li>Clean exterior and interior of cabinets</li><li>Clean refrigerator (inside & out)</li></ul></div>
+                        <div><h4 data-translate="bathroom_focus" class="font-semibold mb-2">Bathroom Focus</h4><ul class="list-disc list-inside space-y-1" data-translate-list="checklist_deep_bathroom"><li>Clean shower door</li><li>Remove water marks from walls</li><li>Clean bathroom walls</li></ul></div>
                     </div>
                 </details>
                 <details class="checklist-accordion bg-white p-6 rounded-lg shadow-md group">
-                    <summary class="flex justify-between items-center font-bold text-lg">Move-In / Move-Out Cleaning<svg class="w-5 h-5 transform group-open:rotate-180 transition-transform" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg></summary>
+                    <summary class="flex justify-between items-center font-bold text-lg"><span data-translate="service_move">Move-In / Move-Out Cleaning</span><svg class="w-5 h-5 transform group-open:rotate-180 transition-transform" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg></summary>
                      <div class="mt-4 text-sm text-gray-700">
-                        <p class="mb-4 font-semibold">Our most comprehensive clean for empty homes. Includes all Deep Cleaning tasks, with a special focus on preparing a home for the next resident.</p>
+                        <p data-translate="move_desc" class="mb-4 font-semibold">Our most comprehensive clean for empty homes. Includes all Deep Cleaning tasks, with a special focus on preparing a home for the next resident.</p>
                         <div class="grid md:grid-cols-2 gap-x-8 gap-y-4">
-                            <div><h4 class="font-semibold mb-2">Key Additions</h4><ul class="list-disc list-inside space-y-1"><li>Clean inside all cabinets and drawers</li><li>Clean inside oven and dishwasher</li><li>Clean inside all closets</li><li>Clean heat vents and medicine cabinets</li></ul></div>
-                            <div><h4 class="font-semibold mb-2">Property Condition</h4><ul class="list-disc list-inside space-y-1"><li>Property must be empty and unfurnished</li><li>Water and electricity must be on</li></ul></div>
+                            <div><h4 data-translate="key_additions" class="font-semibold mb-2">Key Additions</h4><ul class="list-disc list-inside space-y-1" data-translate-list="checklist_move_additions"><li>Clean inside all cabinets and drawers</li><li>Clean inside oven and dishwasher</li><li>Clean inside all closets</li><li>Clean heat vents and medicine cabinets</li></ul></div>
+                            <div><h4 data-translate="property_condition" class="font-semibold mb-2">Property Condition</h4><ul class="list-disc list-inside space-y-1" data-translate-list="checklist_move_conditions"><li>Property must be empty and unfurnished</li><li>Water and electricity must be on</li></ul></div>
                         </div>
                     </div>
                 </details>
                 <details class="checklist-accordion bg-white p-6 rounded-lg shadow-md group">
-                    <summary class="flex justify-between items-center font-bold text-lg">Post-Construction Cleaning<svg class="w-5 h-5 transform group-open:rotate-180 transition-transform" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg></summary>
+                    <summary class="flex justify-between items-center font-bold text-lg"><span data-translate="service_post_con">Post-Construction Cleaning</span><svg class="w-5 h-5 transform group-open:rotate-180 transition-transform" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg></summary>
                     <div class="mt-4 text-sm text-gray-700">
-                        <p class="mb-4 font-semibold">Specialized cleaning to remove all dust and debris from recent construction or renovation.</p>
+                        <p data-translate="post_con_desc" class="mb-4 font-semibold">Specialized cleaning to remove all dust and debris from recent construction or renovation.</p>
                         <div class="grid md:grid-cols-2 gap-x-8 gap-y-4">
-                            <div><h4 class="font-semibold mb-2">Primary Focus</h4><ul class="list-disc list-inside space-y-1"><li>Dust all surfaces, fans, and fixtures</li><li>Scrape paint off floors and other surfaces</li><li>Clean all windows (inside)</li><li>Deep clean of all cabinets (inside & out)</li><li>Thorough sweep and mop of all floors</li></ul></div>
-                            <div><h4 class="font-semibold mb-2">Areas Covered</h4><ul class="list-disc list-inside space-y-1"><li>Kitchen</li><li>Laundry Room</li><li>Bathrooms</li><li>Living Room & Bedrooms</li></ul></div>
+                            <div><h4 data-translate="primary_focus" class="font-semibold mb-2">Primary Focus</h4><ul class="list-disc list-inside space-y-1" data-translate-list="checklist_post_con_focus"><li>Dust all surfaces, fans, and fixtures</li><li>Scrape paint off floors and other surfaces</li><li>Clean all windows (inside)</li><li>Deep clean of all cabinets (inside & out)</li><li>Thorough sweep and mop of all floors</li></ul></div>
+                            <div><h4 data-translate="areas_covered" class="font-semibold mb-2">Areas Covered</h4><ul class="list-disc list-inside space-y-1" data-translate-list="checklist_post_con_areas"><li>Kitchen</li><li>Laundry Room</li><li>Bathrooms</li><li>Living Room & Bedrooms</li></ul></div>
                         </div>
                     </div>
                 </details>
@@ -146,36 +161,36 @@
             <div class="grid lg:grid-cols-2 gap-12">
                 <!-- Left Side: Inputs -->
                 <div>
-                    <div><h3 class="text-2xl font-bold mb-4 text-center brand-text">Get Your Instant Estimate</h3></div>
+                    <div><h3 data-translate="get_estimate_headline" class="text-2xl font-bold mb-4 text-center brand-text">Get Your Instant Estimate</h3></div>
                     <div>
-                        <h3 class="text-xl font-bold mb-1">Step 1: Choose Your Cleaning Type</h3>
-                        <p class="text-gray-500 mb-4">What level of cleaning do you need?</p>
+                        <h3 data-translate="step1_headline" class="text-xl font-bold mb-1">Step 1: Choose Your Cleaning Type</h3>
+                        <p data-translate="step1_desc" class="text-gray-500 mb-4">What level of cleaning do you need?</p>
                         <div id="cleaning-type" class="grid grid-cols-2 gap-4">
-                            <div class="option-card border-2 border-gray-200 p-4 rounded-lg cursor-pointer text-center" data-value="standard"><h4 class="font-semibold">Standard</h4><p class="text-xs text-gray-500">Recurring upkeep</p></div>
-                            <div class="option-card border-2 border-gray-200 p-4 rounded-lg cursor-pointer text-center selected-option" data-value="deep"><h4 class="font-semibold">Deep Clean</h4><p class="text-xs text-gray-500">Detailed, top-to-bottom</p></div>
-                            <div class="option-card border-2 border-gray-200 p-4 rounded-lg cursor-pointer text-center" data-value="move_in_out"><h4 class="font-semibold">Move-In / Move-Out</h4><p class="text-xs text-gray-500">For empty homes</p></div>
-                            <div class="option-card border-2 border-gray-200 p-4 rounded-lg cursor-pointer text-center" data-value="post_construction"><h4 class="font-semibold">Post-Construction</h4><p class="text-xs text-gray-500">Dust and debris removal</p></div>
+                            <div class="option-card border-2 border-gray-200 p-4 rounded-lg cursor-pointer text-center" data-value="standard"><h4 data-translate="service_standard">Standard</h4><p data-translate="service_standard_desc" class="text-xs text-gray-500">Recurring upkeep</p></div>
+                            <div class="option-card border-2 border-gray-200 p-4 rounded-lg cursor-pointer text-center selected-option" data-value="deep"><h4 data-translate="service_deep">Deep Clean</h4><p data-translate="service_deep_desc" class="text-xs text-gray-500">Detailed, top-to-bottom</p></div>
+                            <div class="option-card border-2 border-gray-200 p-4 rounded-lg cursor-pointer text-center" data-value="move_in_out"><h4 data-translate="service_move">Move-In / Move-Out</h4><p data-translate="service_move_desc" class="text-xs text-gray-500">For empty homes</p></div>
+                            <div class="option-card border-2 border-gray-200 p-4 rounded-lg cursor-pointer text-center" data-value="post_construction"><h4 data-translate="service_post_con">Post-Construction</h4><p data-translate="service_post_con_desc" class="text-xs text-gray-500">Dust and debris removal</p></div>
                         </div>
                     </div>
                     <div class="mt-8">
-                        <h3 class="text-xl font-bold mb-1">Step 2: Tell Us About Your Home</h3>
-                        <p class="text-gray-500 mb-4">This helps us understand the scope of work.</p>
+                        <h3 data-translate="step2_headline" class="text-xl font-bold mb-1">Step 2: Tell Us About Your Home</h3>
+                        <p data-translate="step2_desc" class="text-gray-500 mb-4">This helps us understand the scope of work.</p>
                         <div class="space-y-4">
                             <div>
-                                <label for="sqft-select" class="text-sm font-medium text-gray-700">Square Footage</label>
-                                <select id="sqft-select" class="w-full mt-1 p-4 border-2 border-gray-200 rounded-lg brand-ring focus:border-green-500">
+                                <label for="sqft-select" data-translate="sqft_label" class="text-sm font-medium text-gray-700">Square Footage</label>
+                                <select id="sqft-select" class="w-full mt-1 p-4 border-2 border-gray-200 rounded-lg brand-ring focus:border-green-500" data-translate-options="sqft_options">
                                     <option value="0">up to 1,000 sq ft</option><option value="1">1,001 – 1,500 sq ft</option><option value="2">1,501 – 2,000 sq ft</option><option value="3" selected>2,001 – 2,500 sq ft</option><option value="4">2,501 – 3,000 sq ft</option><option value="5">3,001 – 4,000 sq ft</option><option value="6">4,001 – 5,000 sq ft</option>
                                 </select>
                             </div>
                             <div class="grid grid-cols-2 gap-4">
                                 <div>
-                                    <label for="bed-select" class="text-sm font-medium text-gray-700">Bedrooms</label>
+                                    <label for="bed-select" data-translate="bedrooms_label" class="text-sm font-medium text-gray-700">Bedrooms</label>
                                     <select id="bed-select" class="w-full mt-1 p-4 border-2 border-gray-200 rounded-lg brand-ring focus:border-green-500">
                                         <option>1</option><option>2</option><option selected>3</option><option>4</option><option>5</option><option>6+</option>
                                     </select>
                                 </div>
                                 <div>
-                                    <label for="bath-select" class="text-sm font-medium text-gray-700">Bathrooms</label>
+                                    <label for="bath-select" data-translate="bathrooms_label" class="text-sm font-medium text-gray-700">Bathrooms</label>
                                     <select id="bath-select" class="w-full mt-1 p-4 border-2 border-gray-200 rounded-lg brand-ring focus:border-green-500">
                                         <option>1</option><option>2</option><option selected>3</option><option>4</option><option>5+</option>
                                     </select>
@@ -184,27 +199,27 @@
                         </div>
                     </div>
                     <div class="mt-8">
-                        <h3 class="text-xl font-bold mb-1">Step 3: Customize with Add-Ons</h3>
-                        <p class="text-gray-500 mb-4">Select any extras you'd like.</p>
+                        <h3 data-translate="step3_headline" class="text-xl font-bold mb-1">Step 3: Customize with Add-Ons</h3>
+                        <p data-translate="step3_desc" class="text-gray-500 mb-4">Select any extras you'd like.</p>
                         <div id="addons" class="space-y-3">
-                            <label class="flex items-center p-3 bg-gray-50 rounded-lg hover:bg-gray-100 cursor-pointer"><input type="checkbox" data-price="24.99" class="h-5 w-5 rounded border-gray-300 text-green-600 brand-ring"><span class="ml-3 text-sm font-medium">Inside Fridge</span><span class="ml-auto text-sm text-gray-500">+$24.99</span></label>
-                            <label class="flex items-center p-3 bg-gray-50 rounded-lg hover:bg-gray-100 cursor-pointer"><input type="checkbox" data-price="24.99" class="h-5 w-5 rounded border-gray-300 text-green-600 brand-ring"><span class="ml-3 text-sm font-medium">Inside Oven</span><span class="ml-auto text-sm text-gray-500">+$24.99</span></label>
-                            <label class="flex items-center p-3 bg-gray-50 rounded-lg hover:bg-gray-100 cursor-pointer"><input type="checkbox" data-price="surcharge" data-surcharge="0.10" class="h-5 w-5 rounded border-gray-300 text-green-600 brand-ring"><span class="ml-3 text-sm font-medium">Heavy Pet Hair</span><span class="ml-auto text-sm text-gray-500">+10%</span></label>
-                            <label class="flex items-center p-3 bg-gray-50 rounded-lg hover:bg-gray-100 cursor-pointer"><input type="checkbox" data-price="39.99" class="h-5 w-5 rounded border-gray-300 text-green-600 brand-ring"><span class="ml-3 text-sm font-medium">12ft+ Ceilings / Ladder Work</span><span class="ml-auto text-sm text-gray-500">+$39.99</span></label>
+                            <label class="flex items-center p-3 bg-gray-50 rounded-lg hover:bg-gray-100 cursor-pointer"><input type="checkbox" data-price="24.99" class="h-5 w-5 rounded border-gray-300 text-green-600 brand-ring"><span data-translate="addon_fridge" class="ml-3 text-sm font-medium">Inside Fridge</span><span class="ml-auto text-sm text-gray-500">+$24.99</span></label>
+                            <label class="flex items-center p-3 bg-gray-50 rounded-lg hover:bg-gray-100 cursor-pointer"><input type="checkbox" data-price="24.99" class="h-5 w-5 rounded border-gray-300 text-green-600 brand-ring"><span data-translate="addon_oven" class="ml-3 text-sm font-medium">Inside Oven</span><span class="ml-auto text-sm text-gray-500">+$24.99</span></label>
+                            <label class="flex items-center p-3 bg-gray-50 rounded-lg hover:bg-gray-100 cursor-pointer"><input type="checkbox" data-price="surcharge" data-surcharge="0.10" class="h-5 w-5 rounded border-gray-300 text-green-600 brand-ring"><span data-translate="addon_pets" class="ml-3 text-sm font-medium">Heavy Pet Hair</span><span class="ml-auto text-sm text-gray-500">+10%</span></label>
+                            <label class="flex items-center p-3 bg-gray-50 rounded-lg hover:bg-gray-100 cursor-pointer"><input type="checkbox" data-price="39.99" class="h-5 w-5 rounded border-gray-300 text-green-600 brand-ring"><span data-translate="addon_ceilings" class="ml-3 text-sm font-medium">12ft+ Ceilings / Ladder Work</span><span class="ml-auto text-sm text-gray-500">+$39.99</span></label>
                         </div>
-                        <p class="text-xs text-gray-500 mt-4">Note: Interior windows, carpet shampooing, and excess trash removal are quoted separately after a walkthrough or photos.</p>
+                        <p data-translate="addons_note" class="text-xs text-gray-500 mt-4">Note: Interior windows and excess trash removal are quoted separately after a walkthrough or photos.</p>
                     </div>
                 </div>
                 <!-- Right Side: Quote Summary -->
                 <div class="brand-bg-light rounded-lg p-8 sticky top-8 self-start">
-                    <h3 class="text-2xl font-bold brand-text">Your Quote Summary</h3>
+                    <h3 data-translate="quote_summary_headline" class="text-2xl font-bold brand-text">Your Quote Summary</h3>
                     <div class="mt-6 space-y-4">
-                        <div class="flex justify-between items-center"><p class="text-gray-600">Base Cleaning Price:</p><p id="base-price-display" class="font-semibold text-lg">$0.00</p></div>
+                        <div class="flex justify-between items-center"><p data-translate="base_price_label" class="text-gray-600">Base Cleaning Price:</p><p id="base-price-display" class="font-semibold text-lg">$0.00</p></div>
                         <div id="addons-summary" class="border-t border-b border-gray-200 py-4 space-y-2"></div>
-                        <div class="price-display p-4 rounded-lg mt-4"><div class="flex justify-between items-center"><p class="text-lg font-bold brand-text">Total Estimate:</p><p id="total-price-display" class="text-3xl font-extrabold brand-text">$0.00</p></div></div>
-                        <p class="text-xs text-gray-500 text-center mt-2 mb-6">Final price confirmed after a brief walkthrough. Sales tax will be added to the final invoice.</p>
+                        <div class="price-display p-4 rounded-lg mt-4"><div class="flex justify-between items-center"><p data-translate="total_estimate_label" class="text-lg font-bold brand-text">Total Estimate:</p><p id="total-price-display" class="text-3xl font-extrabold brand-text">$0.00</p></div></div>
+                        <p data-translate="quote_summary_note" class="text-xs text-gray-500 text-center mt-2 mb-6">Final price confirmed after a brief walkthrough. Sales tax will be added to the final invoice.</p>
                     </div>
-                    <button id="book-cleaning-btn" class="cta-button w-full text-center brand-bg text-white font-bold rounded-lg px-8 py-4 text-lg shadow-lg">Book Your Cleaning</button>
+                    <button id="book-cleaning-btn" data-translate="book_cleaning_btn" class="cta-button w-full text-center brand-bg text-white font-bold rounded-lg px-8 py-4 text-lg shadow-lg">Book Your Cleaning</button>
                 </div>
             </div>
         </section>
@@ -213,23 +228,26 @@
         <section id="contact" class="mt-20 bg-white p-8 rounded-2xl shadow-xl">
             <div id="contact-form-container">
                 <div class="text-center max-w-2xl mx-auto">
-                    <h2 class="text-3xl font-bold mb-2 brand-text">Ready for a Spotless Home?</h2>
-                    <p class="text-gray-600 mb-8">Fill out the form below or call us at <a href="tel:214-563-3349" class="font-semibold brand-text">214-563-3349</a> to schedule your service. You can also email us at <a href="mailto:EverCleanHousekeeping.co@gmail.com" class="font-semibold brand-text">EverCleanHousekeeping.co@gmail.com</a>.</p>
+                    <h2 data-translate="contact_headline" class="text-3xl font-bold mb-2 brand-text">Ready for a Spotless Home?</h2>
+                    <p data-translate="contact_desc" class="text-gray-600 mb-8">Fill out the form below or call us at <a href="tel:214-563-3349" class="font-semibold brand-text">214-563-3349</a> to schedule your service. You can also email us at <a href="mailto:EverCleanHousekeeping.co@gmail.com" class="font-semibold brand-text">EverCleanHousekeeping.co@gmail.com</a>.</p>
                 </div>
                 <form id="contact-form" class="max-w-xl mx-auto">
                     <input type="hidden" name="quote_summary" id="quote-summary-input">
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        <input id="contact-name" type="text" name="name" placeholder="Your Name" required class="w-full p-3 border-2 border-gray-200 rounded-lg brand-ring focus:border-green-500">
-                        <input id="contact-email" type="email" name="email" placeholder="Your Email" required class="w-full p-3 border-2 border-gray-200 rounded-lg brand-ring focus:border-green-500">
+                        <input id="contact-name" type="text" name="name" data-translate-placeholder="form_name" placeholder="Your Name" required class="w-full p-3 border-2 border-gray-200 rounded-lg brand-ring focus:border-green-500">
+                        <input id="contact-email" type="email" name="email" data-translate-placeholder="form_email" placeholder="Your Email" required class="w-full p-3 border-2 border-gray-200 rounded-lg brand-ring focus:border-green-500">
                     </div>
-                    <div class="mt-4"><input id="contact-phone" type="tel" name="phone" placeholder="Your Phone Number" required class="w-full p-3 border-2 border-gray-200 rounded-lg brand-ring focus:border-green-500"></div>
-                    <div class="mt-4"><input id="address-input" type="text" name="address" placeholder="Street Address" required class="w-full p-3 border-2 border-gray-200 rounded-lg brand-ring focus:border-green-500"></div>
+                    <div class="mt-4"><input id="contact-phone" type="tel" name="phone" data-translate-placeholder="form_phone" placeholder="Your Phone Number" required class="w-full p-3 border-2 border-gray-200 rounded-lg brand-ring focus:border-green-500"></div>
                     <div class="mt-4">
-                        <label for="date-input" class="text-sm font-medium text-gray-700">Preferred Cleaning Date</label>
-                        <input id="date-input" type="text" name="cleaning_date" placeholder="Select a date" required class="w-full mt-1 p-3 border-2 border-gray-200 rounded-lg brand-ring focus:border-green-500">
+                        <input id="address-input" type="text" name="address" data-translate-placeholder="form_address" placeholder="Street Address" required class="w-full p-3 border-2 border-gray-200 rounded-lg brand-ring focus:border-green-500">
+                        <span id="address-error" data-translate="form_address_error" class="text-red-600 text-sm mt-1 hidden">Please select a full, valid address from the suggestions.</span>
                     </div>
-                    <div class="mt-4"><textarea id="contact-message" name="message" placeholder="Any additional notes for your cleaning?" rows="4" class="w-full p-3 border-2 border-gray-200 rounded-lg brand-ring focus:border-green-500"></textarea></div>
-                    <div class="text-center mt-6"><button type="submit" class="cta-button w-full md:w-auto brand-bg text-white font-bold rounded-lg px-12 py-4 text-lg shadow-lg">Request My Cleaning</button></div>
+                    <div class="mt-4">
+                        <label for="date-input" data-translate="form_date_label" class="text-sm font-medium text-gray-700">Preferred Cleaning Date</label>
+                        <input id="date-input" type="text" name="cleaning_date" data-translate-placeholder="form_date_placeholder" placeholder="Select a date" required class="w-full mt-1 p-3 border-2 border-gray-200 rounded-lg brand-ring focus:border-green-500">
+                    </div>
+                    <div class="mt-4"><textarea id="contact-message" name="message" data-translate-placeholder="form_message" placeholder="Any additional notes for your cleaning?" rows="4" class="w-full p-3 border-2 border-gray-200 rounded-lg brand-ring focus:border-green-500"></textarea></div>
+                    <div class="text-center mt-6"><button type="submit" data-translate="form_submit_btn" class="cta-button w-full md:w-auto brand-bg text-white font-bold rounded-lg px-12 py-4 text-lg shadow-lg">Request My Cleaning</button></div>
                 </form>
             </div>
         </section>
@@ -238,8 +256,8 @@
     <footer class="bg-gray-800 text-white mt-20">
         <div class="container mx-auto px-6 py-8 text-center text-sm">
             <img src="https://googleusercontent.com/file_content/4" alt="EverClean Housekeeping Logo" class="h-12 w-12 mx-auto mb-4" onerror="this.style.display='none'">
-            <p>&copy; 2025 EverClean Housekeeping. All Rights Reserved.</p>
-            <p class="mt-2 text-gray-400">A family-owned business serving DeSoto, Midlothian, Cedar Hill, and surrounding communities.</p>
+            <p data-translate="footer_copyright">&copy; 2025 EverClean Housekeeping. All Rights Reserved.</p>
+            <p data-translate="footer_desc" class="mt-2 text-gray-400">A family-owned business serving DeSoto, Midlothian, Cedar Hill, and surrounding communities in the DFW.</p>
         </div>
     </footer>
 
@@ -247,20 +265,237 @@
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 
     <script>
-        // This function needs to be in the global scope so the Google Maps callback can find it.
+        // This variable needs to be in the global scope so the Google Maps callback can find it.
+        let isAddressComplete = false;
+
         function initAutocomplete() {
             const addressInput = document.getElementById('address-input');
+            const addressError = document.getElementById('address-error');
             if (addressInput) {
                 const options = {
                     componentRestrictions: { country: "us" },
-                    fields: ["address_components", "geometry", "icon", "name"],
+                    fields: ["address_components", "geometry", "types"],
                     types: ["address"],
                 };
                 const autocomplete = new google.maps.places.Autocomplete(addressInput, options);
+
+                autocomplete.addListener('place_changed', () => {
+                    const place = autocomplete.getPlace();
+                    if (place.types && place.types.includes('street_address')) {
+                        isAddressComplete = true;
+                        addressError.classList.add('hidden');
+                    } else {
+                        isAddressComplete = false;
+                        addressInput.value = '';
+                        addressError.classList.remove('hidden');
+                    }
+                });
+
+                addressInput.addEventListener('input', () => {
+                    isAddressComplete = false;
+                });
             }
         }
 
         document.addEventListener('DOMContentLoaded', function() {
+            // --- TRANSLATION LOGIC ---
+            const translations = {
+                en: {
+                    main_headline: "EverClean Housekeeping",
+                    tagline: "Your Local, Family-Owned & Home Cleaning Experts.",
+                    service_area: "Proudly serving the Dallas/Fort Worth area, including Waxahachie and Midlothian",
+                    get_quote_btn: "Get an Instant Quote",
+                    whats_included_headline: "What's Included in Your Clean?",
+                    service_standard: "Standard Cleaning",
+                    kitchen: "Kitchen",
+                    bathrooms: "Bathrooms",
+                    bedrooms: "Bedrooms",
+                    common_areas: "All Common Areas",
+                    service_deep: "Deep Cleaning",
+                    deep_includes: "Includes Everything in Standard, PLUS:",
+                    kitchen_focus: "Kitchen Focus",
+                    bathroom_focus: "Bathroom Focus",
+                    service_move: "Move-In / Move-Out Cleaning",
+                    move_desc: "Our most comprehensive clean for empty homes. Includes all Deep Cleaning tasks, with a special focus on preparing a home for the next resident.",
+                    key_additions: "Key Additions",
+                    property_condition: "Property Condition",
+                    service_post_con: "Post-Construction Cleaning",
+                    post_con_desc: "Specialized cleaning to remove all dust and debris from recent construction or renovation.",
+                    primary_focus: "Primary Focus",
+                    areas_covered: "Areas Covered",
+                    get_estimate_headline: "Get Your Instant Estimate",
+                    step1_headline: "Step 1: Choose Your Cleaning Type",
+                    step1_desc: "What level of cleaning do you need?",
+                    service_standard_desc: "Recurring upkeep",
+                    service_deep_desc: "Detailed, top-to-bottom",
+                    service_move_desc: "For empty homes",
+                    service_post_con_desc: "Dust and debris removal",
+                    step2_headline: "Step 2: Tell Us About Your Home",
+                    step2_desc: "This helps us understand the scope of work.",
+                    sqft_label: "Square Footage",
+                    bedrooms_label: "Bedrooms",
+                    bathrooms_label: "Bathrooms",
+                    step3_headline: "Step 3: Customize with Add-Ons",
+                    step3_desc: "Select any extras you'd like.",
+                    addon_fridge: "Inside Fridge",
+                    addon_oven: "Inside Oven",
+                    addon_pets: "Heavy Pet Hair",
+                    addon_ceilings: "12ft+ Ceilings / Ladder Work",
+                    addons_note: "Note: Interior windows and excess trash removal are quoted separately after a walkthrough or photos.",
+                    quote_summary_headline: "Your Quote Summary",
+                    base_price_label: "Base Cleaning Price:",
+                    total_estimate_label: "Total Estimate:",
+                    quote_summary_note: "Final price confirmed after a brief walkthrough. Sales tax will be added to the final invoice.",
+                    book_cleaning_btn: "Book Your Cleaning",
+                    contact_headline: "Ready for a Spotless Home?",
+                    contact_desc: `Fill out the form below or call us at <a href="tel:214-563-3349" class="font-semibold brand-text">214-563-3349</a> to schedule your service. You can also email us at <a href="mailto:EverCleanHousekeeping.co@gmail.com" class="font-semibold brand-text">EverCleanHousekeeping.co@gmail.com</a>.`,
+                    form_name: "Your Name",
+                    form_email: "Your Email",
+                    form_phone: "Your Phone Number",
+                    form_address: "Street Address",
+                    form_address_error: "Please select a full, valid address from the suggestions.",
+                    form_date_label: "Preferred Cleaning Date",
+                    form_date_placeholder: "Select a date",
+                    form_message: "Any additional notes for your cleaning?",
+                    form_submit_btn: "Request My Cleaning",
+                    footer_copyright: "&copy; 2025 EverClean Housekeeping. All Rights Reserved.",
+                    footer_desc: "A family-owned business serving DeSoto, Midlothian, Cedar Hill, and surrounding communities in the DFW.",
+                    checklist_standard_kitchen: ["Clean exterior of all appliances","Clean tables and countertops","Clean and disinfect sink","Clean exterior of cabinets","Sweep and mop floors"],
+                    checklist_standard_bathrooms: ["Clean bathtub/shower","Disinfect sinks and polish fixtures","Clean and disinfect toilet","Clean mirrors","Sweep and mop floors"],
+                    checklist_standard_bedrooms: ["Dust dressers, lamps, picture frames","Dust ceiling fan","Clean mirrors","Sweep and mop floors"],
+                    checklist_standard_common: ["Organize cushions","Dust all decorations and surfaces","Basic organization","Sweep and mop floors"],
+                    checklist_deep_plus: ["Detailed baseboard cleaning","Clean interior of windows","Remove cobwebs from ceilings & fans","Clean air vents","Clean switches/power outlets"],
+                    checklist_deep_kitchen: ["Clean exterior and interior of cabinets","Clean refrigerator (inside & out)"],
+                    checklist_deep_bathroom: ["Clean shower door","Remove water marks from walls","Clean bathroom walls"],
+                    checklist_move_additions: ["Clean inside all cabinets and drawers","Clean inside oven and dishwasher","Clean inside all closets","Clean heat vents and medicine cabinets"],
+                    checklist_move_conditions: ["Property must be empty and unfurnished","Water and electricity must be on"],
+                    checklist_post_con_focus: ["Dust all surfaces, fans, and fixtures","Scrape paint off floors and other surfaces","Clean all windows (inside)","Deep clean of all cabinets (inside & out)","Thorough sweep and mop of all floors"],
+                    checklist_post_con_areas: ["Kitchen","Laundry Room","Bathrooms","Living Room & Bedrooms"],
+                    sqft_options: ["up to 1,000 sq ft","1,001 – 1,500 sq ft","1,501 – 2,000 sq ft","2,001 – 2,500 sq ft","2,501 – 3,000 sq ft","3,001 – 4,000 sq ft","4,001 – 5,000 sq ft"]
+                },
+                es: {
+                    main_headline: "EverClean Housekeeping",
+                    tagline: "Sus Expertos Locales y Familiares en Limpieza del Hogar.",
+                    service_area: "Orgullosamente sirviendo el área de Dallas/Fort Worth, incluyendo Waxahachie y Midlothian",
+                    get_quote_btn: "Obtenga una Cotización Instantánea",
+                    whats_included_headline: "¿Qué se Incluye en su Limpieza?",
+                    service_standard: "Limpieza Estándar",
+                    kitchen: "Cocina",
+                    bathrooms: "Baños",
+                    bedrooms: "Dormitorios",
+                    common_areas: "Todas las Áreas Comunes",
+                    service_deep: "Limpieza Profunda",
+                    deep_includes: "Incluye todo lo de la Limpieza Estándar, MÁS:",
+                    kitchen_focus: "Enfoque en la Cocina",
+                    bathroom_focus: "Enfoque en el Baño",
+                    service_move: "Limpieza de Mudanza (Entrada/Salida)",
+                    move_desc: "Nuestra limpieza más completa para casas vacías. Incluye todas las tareas de Limpieza Profunda, con un enfoque especial en preparar la casa para el próximo residente.",
+                    key_additions: "Adiciones Clave",
+                    property_condition: "Condición de la Propiedad",
+                    service_post_con: "Limpieza Post-Construcción",
+                    post_con_desc: "Limpieza especializada para eliminar todo el polvo y los escombros de una construcción o renovación reciente.",
+                    primary_focus: "Enfoque Principal",
+                    areas_covered: "Áreas Cubiertas",
+                    get_estimate_headline: "Obtenga su Estimación Instantánea",
+                    step1_headline: "Paso 1: Elija su Tipo de Limpieza",
+                    step1_desc: "¿Qué nivel de limpieza necesita?",
+                    service_standard_desc: "Mantenimiento recurrente",
+                    service_deep_desc: "Detallada, de arriba a abajo",
+                    service_move_desc: "Para casas vacías",
+                    service_post_con_desc: "Eliminación de polvo y escombros",
+                    step2_headline: "Paso 2: Cuéntenos Sobre su Hogar",
+                    step2_desc: "Esto nos ayuda a entender el alcance del trabajo.",
+                    sqft_label: "Pies Cuadrados",
+                    bedrooms_label: "Dormitorios",
+                    bathrooms_label: "Baños",
+                    step3_headline: "Paso 3: Personalice con Adicionales",
+                    step3_desc: "Seleccione los extras que desee.",
+                    addon_fridge: "Interior del Refrigerador",
+                    addon_oven: "Interior del Horno",
+                    addon_pets: "Pelo de Mascota Abundante",
+                    addon_ceilings: "Techos de 12ft+ / Trabajo con Escalera",
+                    addons_note: "Nota: La limpieza de ventanas interiores y la eliminación de basura en exceso se cotizan por separado después de una visita o fotos.",
+                    quote_summary_headline: "Resumen de su Cotización",
+                    base_price_label: "Precio Base de Limpieza:",
+                    total_estimate_label: "Estimación Total:",
+                    quote_summary_note: "El precio final se confirma después de una breve visita. El impuesto sobre las ventas se añadirá a la factura final.",
+                    book_cleaning_btn: "Reservar su Limpieza",
+                    contact_headline: "¿Listo para un Hogar Impecable?",
+                    contact_desc: `Llene el siguiente formulario o llámenos al <a href="tel:214-563-3349" class="font-semibold brand-text">214-563-3349</a> para programar su servicio. También puede enviarnos un correo electrónico a <a href="mailto:EverCleanHousekeeping.co@gmail.com" class="font-semibold brand-text">EverCleanHousekeeping.co@gmail.com</a>.`,
+                    form_name: "Su Nombre",
+                    form_email: "Su Correo Electrónico",
+                    form_phone: "Su Número de Teléfono",
+                    form_address: "Dirección",
+                    form_address_error: "Por favor, seleccione una dirección completa y válida de las sugerencias.",
+                    form_date_label: "Fecha de Limpieza Preferida",
+                    form_date_placeholder: "Seleccione una fecha",
+                    form_message: "¿Alguna nota adicional para su limpieza?",
+                    form_submit_btn: "Solicitar mi Limpieza",
+                    footer_copyright: "&copy; 2025 EverClean Housekeeping. Todos los derechos reservados.",
+                    footer_desc: "Un negocio familiar que sirve a DeSoto, Midlothian, Cedar Hill y las comunidades circundantes en el DFW.",
+                    checklist_standard_kitchen: ["Limpiar el exterior de todos los electrodomésticos","Limpiar mesas y encimeras","Limpiar y desinfectar el fregadero","Limpiar el exterior de los gabinetes","Barrer y trapear los pisos"],
+                    checklist_standard_bathrooms: ["Limpiar la bañera/ducha","Desinfectar lavabos y pulir grifos","Limpiar y desinfectar el inodoro","Limpiar espejos","Barrer y trapear los pisos"],
+                    checklist_standard_bedrooms: ["Quitar el polvo de cómodas, lámparas y marcos","Quitar el polvo del ventilador de techo","Limpiar espejos","Barrer y trapear los pisos"],
+                    checklist_standard_common: ["Organizar cojines","Quitar el polvo de todas las decoraciones y superficies","Organización básica","Barrer y trapear los pisos"],
+                    checklist_deep_plus: ["Limpieza detallada de zócalos","Limpiar el interior de las ventanas","Eliminar telarañas de techos y ventiladores","Limpiar las rejillas de ventilación","Limpiar interruptores y enchufes"],
+                    checklist_deep_kitchen: ["Limpiar el exterior e interior de los gabinetes","Limpiar el refrigerador (por dentro y por fuera)"],
+                    checklist_deep_bathroom: ["Limpiar la puerta de la ducha","Eliminar marcas de agua de las paredes","Limpiar las paredes del baño"],
+                    checklist_move_additions: ["Limpiar el interior de todos los gabinetes y cajones","Limpiar el interior del horno y lavavajillas","Limpiar el interior de todos los armarios","Limpiar las rejillas de calefacción y botiquines"],
+                    checklist_move_conditions: ["La propiedad debe estar vacía y sin muebles","El agua y la electricidad deben estar conectadas"],
+                    checklist_post_con_focus: ["Quitar el polvo de todas las superficies, ventiladores y accesorios","Raspar la pintura de los pisos y otras superficies","Limpiar todas las ventanas (interior)","Limpieza profunda de todos los gabinetes (interior y exterior)","Barrer y trapear a fondo todos los pisos"],
+                    checklist_post_con_areas: ["Cocina","Lavandería","Baños","Sala y Dormitorios"],
+                    sqft_options: ["hasta 1,000 pies²","1,001 – 1,500 pies²","1,501 – 2,000 pies²","2,001 – 2,500 pies²","2,501 – 3,000 pies²","3,001 – 4,000 pies²","4,001 – 5,000 pies²"]
+                }
+            };
+
+            const langEnBtn = document.getElementById('lang-en');
+            const langEsBtn = document.getElementById('lang-es');
+
+            function translatePage(lang) {
+                document.querySelectorAll('[data-translate]').forEach(el => {
+                    const key = el.dataset.translate;
+                    if (translations[lang] && translations[lang][key]) {
+                        el.innerHTML = translations[lang][key];
+                    }
+                });
+                document.querySelectorAll('[data-translate-placeholder]').forEach(el => {
+                    const key = el.dataset.translatePlaceholder;
+                    if (translations[lang] && translations[lang][key]) {
+                        el.placeholder = translations[lang][key];
+                    }
+                });
+                document.querySelectorAll('[data-translate-list]').forEach(ul => {
+                    const key = ul.dataset.translateList;
+                    if (translations[lang] && translations[lang][key]) {
+                        ul.innerHTML = translations[lang][key].map(item => `<li>${item}</li>`).join('');
+                    }
+                });
+                 document.querySelectorAll('[data-translate-options]').forEach(select => {
+                    const key = select.dataset.translateOptions;
+                    if (translations[lang] && translations[lang][key]) {
+                        select.querySelectorAll('option').forEach((option, index) => {
+                            option.textContent = translations[lang][key][index];
+                        });
+                    }
+                });
+
+                // Update active button
+                if (lang === 'es') {
+                    langEsBtn.classList.add('active');
+                    langEnBtn.classList.remove('active');
+                } else {
+                    langEnBtn.classList.add('active');
+                    langEsBtn.classList.remove('active');
+                }
+                // Save preference
+                localStorage.setItem('language', lang);
+            }
+
+            langEnBtn.addEventListener('click', () => translatePage('en'));
+            langEsBtn.addEventListener('click', () => translatePage('es'));
+            
+            // --- END TRANSLATION LOGIC ---
+
             const pricingData = {
                 standard: [119.99, 149.99, 179.99, 209.99, 239.99, 279.99, 329.99],
                 multipliers: { standard: 1.0, deep: 1.4, move_in_out: 1.5, post_construction: 1.7 }
@@ -279,7 +514,6 @@
             const bookCleaningBtn = document.getElementById('book-cleaning-btn');
             const phoneInput = document.getElementById('contact-phone');
             
-            // Initialize Flatpickr
             flatpickr("#date-input", {
                 altInput: true,
                 altFormat: "F j, Y",
@@ -321,7 +555,7 @@
                     addonsSummaryContainer.appendChild(summaryItem);
                 });
                 if (addonsSummaryContainer.innerHTML === '') {
-                    addonsSummaryContainer.innerHTML = '<p class="text-sm text-gray-400 text-center">No add-ons selected.</p>';
+                    addonsSummaryContainer.innerHTML = '<p data-translate="no_addons" class="text-sm text-gray-400 text-center">No add-ons selected.</p>';
                 }
                 const totalPrice = basePrice + addonsTotal + petSurcharge;
                 currentQuote = totalPrice;
@@ -349,14 +583,10 @@
                 quoteSummaryInput.value = summary;
             }
 
-            // NEW: Phone number formatting function
             function formatPhoneNumber(event) {
                 const input = event.target;
-                // 1. Remove all non-digit characters
                 let digits = input.value.replace(/\D/g, '');
-                // 2. Limit to 10 digits
                 digits = digits.substring(0, 10);
-                // 3. Apply formatting
                 const areaCode = digits.substring(0, 3);
                 const middle = digits.substring(3, 6);
                 const last = digits.substring(6, 10);
@@ -393,10 +623,17 @@
                 document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
             });
 
-            phoneInput.addEventListener('input', formatPhoneNumber); // Add event listener for phone formatting
+            phoneInput.addEventListener('input', formatPhoneNumber);
             
             contactForm.addEventListener("submit", function(e) {
                 e.preventDefault();
+
+                if (!isAddressComplete) {
+                    const addressError = document.getElementById('address-error');
+                    addressError.classList.remove('hidden');
+                    document.getElementById('address-input').focus();
+                    return;
+                }
                 
                 populateQuoteSummary();
 
@@ -415,8 +652,8 @@
                     if (response.ok) {
                         contactFormContainer.innerHTML = `
                             <div class="text-center p-8">
-                                <h3 class="text-2xl font-bold brand-text">Thank You!</h3>
-                                <p class="text-gray-600 mt-4">Your request has been submitted successfully. We will be in touch shortly!</p>
+                                <h3 data-translate="thank_you_headline" class="text-2xl font-bold brand-text">Thank You!</h3>
+                                <p data-translate="thank_you_desc" class="text-gray-600 mt-4">Your request has been submitted successfully. We will be in touch shortly!</p>
                             </div>
                         `;
                     } else {
@@ -434,6 +671,9 @@
 
 
             calculateAndDisplayPrice();
+            // Check for saved language preference
+            const savedLang = localStorage.getItem('language') || 'en';
+            translatePage(savedLang);
 
         });
     </script>
@@ -442,13 +682,6 @@
     --- HOW TO ACTIVATE YOUR NEW FEATURES ---
 
     1. ACTIVATE GOOGLE ADDRESS AUTOCOMPLETE:
-        a. Go to the Google Cloud Console (https://console.cloud.google.com/) and create a new project.
-        b. In your project, search for and ENABLE BOTH the "Maps JavaScript API" AND the "Places API". This is the most common step people miss.
-        c. Go to "Credentials", click "Create Credentials", and select "API key".
-        d. Copy your new API key. It's VERY important to restrict this key. Click on the key, and under "Application restrictions", select "HTTP referrers (web sites)" and add your website's domain if you have one. If you're just testing, you can leave it unrestricted for now, but be sure to restrict it before you go live.
-        e. Paste your API key into the URL below, replacing "YOUR_API_KEY".
-        f. Add the completed <script> tag below right before the closing </body> tag of this file.
-
         <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places&callback=initAutocomplete" async defer></script>
 
     2. ACTIVATE YOUR NETLIFY FUNCTION (SendGrid):
