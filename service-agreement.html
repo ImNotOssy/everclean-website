@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EverClean Housekeeping - Service Agreement & Policies</title>
+    <title>EverClean Housekeeping - Service Agreement</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
     <style>
@@ -16,6 +16,12 @@
         .lang-toggle button.active {
             background-color: #8E9E82;
             color: white;
+        }
+        .cta-button { transition: all 0.3s ease; }
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            filter: brightness(1.05);
         }
     </style>
 </head>
@@ -38,7 +44,7 @@
                 <img src="https://i.imgur.com/6I3ca1O.png" alt="EverClean Housekeeping Logo" class="h-24 w-24 mx-auto mb-4" onerror="this.onerror=null; this.src='https://placehold.co/96x96/f0f5f0/54624C?text=Logo';">
             </a>
             <h1 data-translate="policies_headline" class="text-4xl md:text-5xl font-extrabold brand-text leading-tight">
-                Our Policies & Service Agreement
+                Official Service Agreement
             </h1>
         </div>
     </header>
@@ -46,69 +52,41 @@
     <!-- Main Content -->
     <main class="container mx-auto px-6 py-16">
         <div class="max-w-4xl mx-auto space-y-8 bg-white p-6 md:p-10 rounded-2xl shadow-xl">
-            <p data-translate="agreement_intro" class="text-sm text-gray-600">By scheduling a service with EverClean Housekeeping, you agree to the following terms and conditions:</p>
+            <p data-translate="agreement_intro" class="text-sm text-gray-600">This Service Agreement ("Agreement") is made between EverClean Housekeeping ("Company," "we," "us") and the client ("Client," "you") who books our services. By scheduling a service with us, you are signifying your acceptance of the terms and conditions outlined in this Agreement.</p>
             
             <div>
                 <h3 class="text-xl font-bold brand-text" data-translate="policy_s1_title">1. Our 24-Hour Satisfaction Guarantee</h3>
-                <div class="mt-2 text-gray-700 space-y-2 text-sm" data-translate-html="policy_s1_body">
-                    <p><strong>How to Report an Issue:</strong> If you are not satisfied with any aspect of our recent service, please notify us within 24 hours of the cleaning by email or phone, including photos of the areas in question.</p>
-                    <p><strong>Our Promise for Significant Issues:</strong> For significant issues, such as an entire room or a major checklist category being missed (e.g., an entire bathroom was not cleaned, floors were not mopped), we will send a cleaner back to your home at our earliest convenience to re-clean the specific areas, at no additional cost.</p>
-                    <p><strong>Our Promise for Minor Issues:</strong> For minor, isolated issues (e.g., a single missed window sill, one dusty vent), a re-clean visit will not be scheduled. Instead, we will note your account and apply a credit for the missed item to your next scheduled cleaning service.</p>
-                    <p><strong>Exclusions:</strong> This guarantee does not include a full or partial refund of your service fee. Our commitment is to correct any issues and ensure the job is done to your satisfaction. Complaints filed more than 24 hours after the service is complete will be addressed at our discretion.</p>
-                </div>
+                <div class="mt-2 text-gray-700 space-y-2 text-sm" data-translate-html="policy_s1_body"></div>
             </div>
 
             <div>
                 <h3 class="text-xl font-bold brand-text" data-translate="policy_s2_title">2. Preparing for Your Cleaning</h3>
-                <div class="mt-2 text-gray-700 space-y-2 text-sm" data-translate-html="policy_s2_body">
-                    <p><strong>Tidying:</strong> Please pick up any clothing, toys, or other personal items from the floor. Our teams will clean around cluttered areas. If you require assistance with tidying, please book our "Tidying & Organizing" add-on service.</p>
-                    <p><strong>Dishes:</strong> Washing dishes is not part of our cleaning packages. Please ensure your sink is clear so we can properly clean and sanitize it.</p>
-                    <p><strong>Valuables:</strong> Please secure any valuables, heirlooms, or irreplaceable items.</p>
-                </div>
+                <div class="mt-2 text-gray-700 space-y-2 text-sm" data-translate-html="policy_s2_body"></div>
             </div>
 
             <div>
                 <h3 class="text-xl font-bold brand-text" data-translate="policy_s3_title">3. Service Scope Clarifications</h3>
-                <div class="mt-2 text-gray-700 space-y-2 text-sm" data-translate-html="policy_s3_body">
-                    <p><strong>Deep Cleaning Appliances:</strong> Our Deep Cleaning service includes the interior and exterior cleaning of <strong>one</strong> standard-sized refrigerator and <strong>one</strong> standard-sized oven located within the main kitchen. This does not include additional appliances such as a second refrigerator/freezer in a garage, basement, or other area. Cleaning of additional appliances can be scheduled for a separate fee.</p>
-                    <p><strong>Post-Construction Cleaning:</strong> This service is for the removal of construction dust and debris from newly installed surfaces. It does not include the removal of large items, construction materials, or trash hauling.</p>
-                    <p><strong>Move-In/Move-Out Cleaning:</strong> This service is designed for empty homes and includes cleaning the inside of empty cabinets, drawers, and closets. It does not include cleaning the interior of furnished cabinets or closets.</p>
-                </div>
+                <div class="mt-2 text-gray-700 space-y-2 text-sm" data-translate-html="policy_s3_body"></div>
             </div>
 
             <div>
                 <h3 class="text-xl font-bold brand-text" data-translate="policy_s4_title">4. Cancellation & Rescheduling Policy</h3>
-                <div class="mt-2 text-gray-700 space-y-2 text-sm" data-translate-html="policy_s4_body">
-                    <p>We reserve a specific time slot for your home. We require a minimum of <strong>48 hours' notice</strong> for any cancellations or rescheduling of your appointment.</p>
-                    <p>Cancellations made with less than 48 hours' notice are subject to a cancellation fee of $50.</p>
-                    <p>If our cleaners are unable to access the property upon arrival (e.g., locked out), a lockout fee equivalent to 50% of the scheduled <strong>base cleaning cost (excluding add-ons)</strong> will be charged.</p>
-                </div>
+                <div class="mt-2 text-gray-700 space-y-2 text-sm" data-translate-html="policy_s4_body"></div>
             </div>
 
             <div>
                 <h3 class="text-xl font-bold brand-text" data-translate="policy_s5_title">5. Pricing & Payment</h3>
-                <div class="mt-2 text-gray-700 space-y-2 text-sm" data-translate-html="policy_s5_body">
-                    <p><strong>Card on File:</strong> To secure your booking, we require a valid credit or debit card to be kept on file in our secure payment system. Your card will not be charged until after your service is complete.</p>
-                    <p><strong>Pricing Adjustments:</strong> All initial prices are estimates based on the information provided. We reserve the right to adjust the final price upon an initial walkthrough if the home's condition or size is significantly different than described. Any changes will be communicated and agreed upon before work begins.</p>
-                    <p><strong>Payment Due:</strong> Payment is due in full upon completion of the service. An invoice will be sent to your email on file, which can be paid securely online.</p>
-                    <p><strong>Late Payments:</strong> If the invoice is not paid within 72 hours, we will automatically charge the card on file. If the payment is declined and the invoice remains unpaid after 7 days, a late fee of $25 will be added.</p>
-                </div>
+                <div class="mt-2 text-gray-700 space-y-2 text-sm" data-translate-html="policy_s5_body"></div>
             </div>
 
             <div>
                 <h3 class="text-xl font-bold brand-text" data-translate="policy_s6_title">6. Breakage & Damage Policy</h3>
-                <div class="mt-2 text-gray-700 space-y-2 text-sm" data-translate-html="policy_s6_body">
-                    <p>Our teams are trained to be exceptionally careful. However, accidents can happen. EverClean Housekeeping is <strong>insured and bonded</strong>.</p>
-                    <p>Any breakage or damage must be reported to our office within 24 hours of the service.</p>
-                    <p>We will make every effort to repair or replace the damaged item. If an item cannot be repaired or replaced, our insurance provider will handle the claim.</p>
-                </div>
+                <div class="mt-2 text-gray-700 space-y-2 text-sm" data-translate-html="policy_s6_body"></div>
             </div>
 
             <div>
                 <h3 class="text-xl font-bold brand-text" data-translate="policy_s7_title">7. Safety & Right to Refuse Service</h3>
-                <div class="mt-2 text-gray-700 space-y-2 text-sm" data-translate-html="policy_s7_body">
-                    <p>The safety of our cleaners is paramount. We reserve the right to refuse or terminate service for any reason, including but not limited to: unsafe conditions (e.g., biohazards, pests, aggressive pets), presence of firearms that are not secured, or disrespectful or inappropriate behavior from anyone on the property.</p>
-                </div>
+                <div class="mt-2 text-gray-700 space-y-2 text-sm" data-translate-html="policy_s7_body"></div>
             </div>
             
             <div class="text-center mt-12">
@@ -120,6 +98,10 @@
     <footer class="bg-gray-800 text-white mt-20">
         <div class="container mx-auto px-6 py-8 text-center text-sm">
             <img src="https://i.imgur.com/6I3ca1O.png" alt="EverClean Housekeeping Logo" class="h-12 w-12 mx-auto mb-4" onerror="this.onerror=null; this.src='https://placehold.co/48x48/f0f5f0/54624C?text=Logo';">
+             <div class="flex justify-center space-x-6 my-4">
+                <a href="service-agreement.html" data-translate="footer_agreement" class="text-gray-400 hover:text-white">Service Agreement</a>
+                <a href="privacy-policy.html" data-translate="footer_privacy" class="text-gray-400 hover:text-white">Privacy Policy</a>
+            </div>
             <p data-translate="footer_copyright">&copy; 2025 EverClean Housekeeping. All Rights Reserved.</p>
             <p data-translate="footer_desc" class="mt-2 text-gray-400">A family-owned business serving DeSoto, Midlothian, Cedar Hill, and surrounding communities in the DFW.</p>
         </div>
@@ -129,10 +111,10 @@
         document.addEventListener('DOMContentLoaded', function() {
             const translations = {
                 en: {
-                    policies_headline: "Our Policies & Service Agreement",
-                    agreement_intro: "By scheduling a service with EverClean Housekeeping, you agree to the following terms and conditions:",
+                    policies_headline: "Official Service Agreement",
+                    agreement_intro: "This Service Agreement ('Agreement') is made between EverClean Housekeeping ('Company,' 'we,' 'us') and the client ('Client,' 'you') who books our services. By scheduling a service with us, you are signifying your acceptance of the terms and conditions outlined in this Agreement.",
                     policy_s1_title: "1. Our 24-Hour Satisfaction Guarantee",
-                    policy_s1_body: `<p><strong>How to Report an Issue:</strong> If you are not satisfied with any aspect of our recent service, please notify us within 24 hours of the cleaning by email or phone, including photos of the areas in question.</p><p><strong>Our Promise for Significant Issues:</strong> For significant issues, such as an entire room or a major checklist category being missed (e.g., an entire bathroom was not cleaned, floors were not mopped), we will send a cleaner back to your home at our earliest convenience to re-clean the specific areas, at no additional cost.</p><p><strong>Our Promise for Minor Issues:</strong> For minor, isolated issues (e.g., a single missed window sill, one dusty vent), a re-clean visit will not be scheduled. Instead, we will note your account and apply a credit for the missed item to your next scheduled cleaning service.</p><p><strong>Exclusions:</strong> This guarantee does not include a full or partial refund of your service fee. Our commitment is to correct any issues and ensure the job is done to your satisfaction. Complaints filed more than 24 hours after the service is complete will be addressed at our discretion.</p>`,
+                    policy_s1_body: `<p><strong>How to Report an Issue:</strong> If you are not satisfied with any aspect of our recent service, you must notify us within 24 hours of the cleaning by email or phone. To help us understand the issue, please provide digital photos of the areas in question.</p><p><strong>Our Promise for Significant Issues:</strong> For significant issues, such as an entire room or a major checklist category being missed (e.g., an entire bathroom was not cleaned, floors were not mopped), we will send a cleaner back to your home at our earliest convenience to re-clean the specific areas, at no additional cost.</p><p><strong>Our Promise for Minor Issues:</strong> For minor, isolated issues (e.g., a single missed window sill, one dusty vent), a re-clean visit will not be scheduled. Instead, we will note your account and apply a credit for the missed item to your next scheduled cleaning service.</p><p><strong>Exclusions:</strong> This guarantee does not include a full or partial refund of your service fee. Our commitment is to correct any issues and ensure the job is done to your satisfaction. Complaints filed more than 24 hours after the service is complete will be addressed at our discretion.</p>`,
                     policy_s2_title: "2. Preparing for Your Cleaning",
                     policy_s2_body: `<p><strong>Tidying:</strong> Please pick up any clothing, toys, or other personal items from the floor. Our teams will clean around cluttered areas. If you require assistance with tidying, please book our "Tidying & Organizing" add-on service.</p><p><strong>Dishes:</strong> Washing dishes is not part of our cleaning packages. Please ensure your sink is clear so we can properly clean and sanitize it.</p><p><strong>Valuables:</strong> Please secure any valuables, heirlooms, or irreplaceable items.</p>`,
                     policy_s3_title: "3. Service Scope Clarifications",
@@ -140,20 +122,22 @@
                     policy_s4_title: "4. Cancellation & Rescheduling Policy",
                     policy_s4_body: `<p>We reserve a specific time slot for your home. We require a minimum of <strong>48 hours' notice</strong> for any cancellations or rescheduling of your appointment.</p><p>Cancellations made with less than 48 hours' notice are subject to a cancellation fee of $50.</p><p>If our cleaners are unable to access the property upon arrival (e.g., locked out), a lockout fee equivalent to 50% of the scheduled <strong>base cleaning cost (excluding add-ons)</strong> will be charged.</p>`,
                     policy_s5_title: "5. Pricing & Payment",
-                    policy_s5_body: `<p><strong>Card on File:</strong> To secure your booking, we require a valid credit or debit card to be kept on file in our secure payment system. Your card will not be charged until after your service is complete.</p><p><strong>Pricing Adjustments:</strong> All initial prices are estimates based on the information provided. We reserve the right to adjust the final price upon an initial walkthrough if the home's condition or size is significantly different than described. Any changes will be communicated and agreed upon before work begins.</p><p><strong>Payment Due:</strong> Payment is due in full upon completion of the service. An invoice will be sent to your email on file, which can be paid securely online.</p><p><strong>Late Payments:</strong> If the invoice is not paid within 72 hours, we will automatically charge the card on file. If the payment is declined and the invoice remains unpaid after 7 days, a late fee of $25 will be added.</p>`,
+                    policy_s5_body: `<p><strong>Card on File & Authorization:</strong> To secure your booking, we require a valid credit or debit card to be kept on file. By providing your payment information, you authorize EverClean Housekeeping to save your payment method for future use via our secure, PCI-compliant payment processor, Stripe.</p><p><strong>Pricing Adjustments:</strong> All initial prices are estimates. We reserve the right to adjust the final price upon an initial walkthrough if the home's condition or size is significantly different than described. Any changes will be communicated and agreed upon before work begins.</p><p><strong>Payment Due:</strong> Payment is due in full upon completion of the service. An invoice will be sent to your email on file.</p><p><strong>Late Payments:</strong> If the invoice is not paid within 72 hours, we will automatically charge the card on file. If the payment is declined and the invoice remains unpaid after 7 days, a late fee of $25 will be added.</p>`,
                     policy_s6_title: "6. Breakage & Damage Policy",
                     policy_s6_body: `<p>Our teams are trained to be exceptionally careful. However, accidents can happen. EverClean Housekeeping is <strong>insured and bonded</strong>.</p><p>Any breakage or damage must be reported to our office within 24 hours of the service.</p><p>We will make every effort to repair or replace the damaged item. If an item cannot be repaired or replaced, our insurance provider will handle the claim.</p>`,
                     policy_s7_title: "7. Safety & Right to Refuse Service",
                     policy_s7_body: `<p>The safety of our cleaners is paramount. We reserve the right to refuse or terminate service for any reason, including but not limited to: unsafe conditions (e.g., biohazards, pests, aggressive pets), presence of firearms that are not secured, or disrespectful or inappropriate behavior from anyone on the property.</p>`,
                     back_to_home: "← Back to Home",
+                    footer_agreement: "Service Agreement",
+                    footer_privacy: "Privacy Policy",
                     footer_copyright: "&copy; 2025 EverClean Housekeeping. All Rights Reserved.",
                     footer_desc: "A family-owned business serving DeSoto, Midlothian, Cedar Hill, and surrounding communities in the DFW."
                 },
                 es: {
-                    policies_headline: "Nuestras Políticas y Acuerdo de Servicio",
-                    agreement_intro: "Al programar un servicio con EverClean Housekeeping, usted acepta los siguientes términos y condiciones:",
+                    policies_headline: "Acuerdo de Servicio Oficial",
+                    agreement_intro: "Este Acuerdo de Servicio ('Acuerdo') se establece entre EverClean Housekeeping ('Compañía', 'nosotros') y el cliente ('Cliente', 'usted') que reserva nuestros servicios. Al programar un servicio con nosotros, usted manifiesta su aceptación de los términos y condiciones descritos en este Acuerdo.",
                     policy_s1_title: "1. Nuestra Garantía de Satisfacción de 24 Horas",
-                    policy_s1_body: `<p><strong>Cómo Reportar un Problema:</strong> Si no está satisfecho con algún aspecto de nuestro servicio reciente, por favor notifíquenos dentro de las 24 horas posteriores a la limpieza por correo electrónico o teléfono, incluyendo fotos de las áreas en cuestión.</p><p><strong>Nuestra Promesa para Problemas Significativos:</strong> Para problemas significativos, como una habitación completa o una categoría principal de la lista de verificación omitida (por ejemplo, un baño entero no se limpió, los pisos no se trapearon), enviaremos a un limpiador de regreso a su hogar a la brevedad posible para volver a limpiar las áreas específicas, sin costo adicional para usted.</p><p><strong>Nuestra Promesa para Problemas Menores:</strong> Para problemas menores y aislados (por ejemplo, un solo alféizar de ventana omitido, una rejilla de ventilación polvorienta), no se programará una visita de re-limpieza. En su lugar, anotaremos en su cuenta y aplicaremos un crédito por el artículo omitido a su próximo servicio de limpieza programado.</p><p><strong>Exclusiones:</strong> Esta garantía no incluye un reembolso total o parcial de su tarifa de servicio. Nuestro compromiso es corregir cualquier problema y asegurarnos de que el trabajo se realice a su entera satisfacción. Las quejas presentadas más de 24 horas después de que se complete el servicio se abordarán a nuestra discreción.</p>`,
+                    policy_s1_body: `<p><strong>Cómo Reportar un Problema:</strong> Si no está satisfecho con algún aspecto de nuestro servicio reciente, debe notificarnos dentro de las 24 horas posteriores a la limpieza por correo electrónico o teléfono. Para ayudarnos a entender el problema, por favor proporcione fotos digitales de las áreas en cuestión.</p><p><strong>Nuestra Promesa para Problemas Significativos:</strong> Para problemas significativos, como una habitación completa o una categoría principal de la lista de verificación omitida (por ejemplo, un baño entero no se limpió, los pisos no se trapearon), enviaremos a un limpiador de regreso a su hogar a la brevedad posible para volver a limpiar las áreas específicas, sin costo adicional para usted.</p><p><strong>Nuestra Promesa para Problemas Menores:</strong> Para problemas menores y aislados (por ejemplo, un solo alféizar de ventana omitido, una rejilla de ventilación polvorienta), no se programará una visita de re-limpieza. En su lugar, anotaremos en su cuenta y aplicaremos un crédito por el artículo omitido a su próximo servicio de limpieza programado.</p><p><strong>Exclusiones:</strong> Esta garantía no incluye un reembolso total o parcial de su tarifa de servicio. Nuestro compromiso es corregir cualquier problema y asegurarnos de que el trabajo se realice a su entera satisfacción. Las quejas presentadas más de 24 horas después de que se complete el servicio se abordarán a nuestra discreción.</p>`,
                     policy_s2_title: "2. Preparación para su Limpieza",
                     policy_s2_body: `<p><strong>Ordenar:</strong> Por favor, recoja cualquier ropa, juguetes u otros artículos personales del suelo. Nuestros equipos limpiarán alrededor de las áreas desordenadas. Si necesita ayuda para ordenar, por favor reserve nuestro servicio adicional de "Ordenar y Organizar".</p><p><strong>Platos:</strong> El lavado de platos no está incluido en nuestros paquetes de limpieza. Por favor, asegúrese de que su fregadero esté despejado para que podamos limpiarlo y desinfectarlo adecuadamente.</p><p><strong>Objetos de Valor:</strong> Por favor, asegure cualquier objeto de valor, reliquias o artículos irremplazables.</p>`,
                     policy_s3_title: "3. Aclaraciones sobre el Alcance del Servicio",
@@ -161,12 +145,14 @@
                     policy_s4_title: "4. Política de Cancelación y Reprogramación",
                     policy_s4_body: `<p>Reservamos un horario específico para su hogar. Requerimos un mínimo de <strong>48 horas de antelación</strong> para cualquier cancelación o reprogramación de su cita.</p><p>Las cancelaciones realizadas con menos de 48 horas de antelación están sujetas a una tarifa de cancelación de $50.</p><p>Si nuestros limpiadores no pueden acceder a la propiedad a su llegada (por ejemplo, puerta cerrada), se cobrará una tarifa de bloqueo equivalente al 50% del <strong>costo base de la limpieza (excluyendo adicionales)</strong>.</p>`,
                     policy_s5_title: "5. Precios y Pagos",
-                    policy_s5_body: `<p><strong>Tarjeta en Archivo:</strong> Para asegurar su reserva, requerimos que se mantenga una tarjeta de crédito o débito válida en nuestro sistema de pago seguro. No se le cobrará a su tarjeta hasta después de que se complete su servicio.</p><p><strong>Ajustes de Precios:</strong> Todos los precios iniciales son estimaciones basadas en la información proporcionada. Nos reservamos el derecho de ajustar el precio final después de una visita inicial si la condición o el tamaño de la casa es significativamente diferente a lo descrito. Cualquier cambio se comunicará y acordará antes de que comience el trabajo.</p><p><strong>Vencimiento del Pago:</strong> El pago vence en su totalidad al finalizar el servicio. Se enviará una factura a su correo electrónico registrado, que se puede pagar de forma segura en línea.</p><p><strong>Pagos Atrasados:</strong> Si la factura no se paga dentro de las 72 horas, cargaremos automáticamente la tarjeta registrada. Si el pago es rechazado y la factura permanece sin pagar después de 7 días, se agregará un cargo por mora de $25.</p>`,
+                    policy_s5_body: `<p><strong>Tarjeta en Archivo y Autorización:</strong> Para asegurar su reserva, requerimos que se mantenga una tarjeta de crédito o débito válida en nuestro sistema de pago seguro. Al proporcionar su información de pago, usted autoriza a EverClean Housekeeping a guardar su método de pago para uso futuro a través de nuestro procesador de pagos seguro y compatible con PCI, Stripe.</p><p><strong>Ajustes de Precios:</strong> Todos los precios iniciales son estimaciones. Nos reservamos el derecho de ajustar el precio final después de una visita inicial si la condición o el tamaño de la casa es significativamente diferente a lo descrito. Cualquier cambio se comunicará y acordará antes de que comience el trabajo.</p><p><strong>Vencimiento del Pago:</strong> El pago vence en su totalidad al finalizar el servicio. Se enviará una factura a su correo electrónico registrado.</p><p><strong>Pagos Atrasados:</strong> Si la factura no se paga dentro de las 72 horas, cargaremos automáticamente la tarjeta registrada. Si el pago es rechazado y la factura permanece sin pagar después de 7 días, se agregará un cargo por mora de $25.</p>`,
                     policy_s6_title: "6. Política de Roturas y Daños",
                     policy_s6_body: `<p>Nuestros equipos están capacitados para ser excepcionalmente cuidadosos. Sin embargo, los accidentes pueden ocurrir. EverClean Housekeeping está <strong>asegurado y garantizado</strong>.</p><p>Cualquier rotura o daño debe ser reportado a nuestra oficina dentro de las 24 horas posteriores al servicio.</p><p>Haremos todo lo posible para reparar o reemplazar el artículo dañado. Si un artículo no puede ser reparado o reemplazado, nuestro proveedor de seguros se encargará del reclamo.</p>`,
                     policy_s7_title: "7. Seguridad y Derecho a Negar el Servicio",
                     policy_s7_body: `<p>La seguridad de nuestros limpiadores es primordial. Nos reservamos el derecho de negar o terminar el servicio por cualquier motivo, incluyendo, entre otros: condiciones inseguras (por ejemplo, riesgos biológicos, plagas, mascotas agresivas), presencia de armas de fuego no aseguradas o comportamiento irrespetuoso o inapropiado por parte de cualquier persona en la propiedad.</p>`,
                     back_to_home: "← Volver al Inicio",
+                    footer_agreement: "Acuerdo de Servicio",
+                    footer_privacy: "Política de Privacidad",
                     footer_copyright: "&copy; 2025 EverClean Housekeeping. Todos los derechos reservados.",
                     footer_desc: "Un negocio familiar que sirve a DeSoto, Midlothian, Cedar Hill y las comunidades circundantes en el DFW."
                 }
